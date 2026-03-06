@@ -52,6 +52,20 @@
       "rating": 4
     },
     {
+      "name": "Affinity Photo",
+      "description": "Professional photo editing app by Canva (formerly Serif). Completely free since the Canva acquisition. Known for exceptional performance, RAW editing, HDR merge, and non-destructive editing. Linux support has been announced and is expected soon.",
+      "features": [
+        "Non-destructive editing with live filters",
+        "Advanced RAW processing engine",
+        "HDR merge and tone mapping",
+        "Focus stacking and panorama stitching",
+        "Full PSD import and export",
+        "Completely free — no subscription or purchase"
+      ],
+      "website": "https://affinity.serif.com/photo/",
+      "rating": 5
+    },
+    {
       "name": "Inkscape",
       "description": "Vector graphics editor, similar to Adobe Illustrator. Best for logos, icons, and scalable graphics.",
       "features": [
@@ -67,7 +81,7 @@
       "rating": 5
     }
   ],
-  "verdict": "GIMP is the most complete Photoshop replacement for photo editing. Krita is better for digital painting and illustration. For quick edits without installing software, Photopea works great in your browser.",
+  "verdict": "GIMP is the most complete open-source Photoshop replacement. Affinity Photo is now completely free and offers a polished, professional experience with Linux support coming soon. Krita is ideal for digital painting and illustration. For quick edits without installing software, Photopea works great in your browser.",
   "seo": {
     "title": "Free Photoshop Alternatives for Linux | GIMP, Krita & More",
     "description": "Best free Photoshop alternatives for Linux. Compare GIMP, Krita, Photopea, and Inkscape. Professional image editing without subscriptions.",

@@ -1,0 +1,62 @@
+{
+  "title": "Free Adobe Lightroom Alternatives for Linux",
+  "slug": "lightroom",
+  "proprietary": {
+    "name": "Adobe Lightroom",
+    "description": "A professional photo editing and management application widely used by photographers for RAW processing, non-destructive editing, batch operations, and catalog-based photo organization. Part of Adobe's Photography plan alongside Photoshop.",
+    "price": "$9.99/month"
+  },
+  "alternatives": [
+    {
+      "name": "darktable",
+      "description": "A powerful open-source photography workflow application and RAW developer that serves as a virtual lighttable and darkroom for photographers. darktable offers non-destructive editing throughout its pipeline, supports a vast range of RAW formats, and provides professional-grade color management and tethered shooting capabilities.",
+      "features": [
+        "Non-destructive RAW editing with full history stack",
+        "Support for 600+ camera RAW formats",
+        "Advanced color management with ICC profile support",
+        "Tethered shooting for studio workflows",
+        "Powerful masking system with parametric and drawn masks",
+        "GPU-accelerated processing via OpenCL"
+      ],
+      "website": "https://www.darktable.org",
+      "installCommand": "sudo apt install darktable",
+      "rating": 5
+    },
+    {
+      "name": "RawTherapee",
+      "description": "A free, cross-platform RAW image processing application that provides a comprehensive set of tools for processing photos from any digital camera. RawTherapee is known for its detailed control over demosaicing algorithms, advanced noise reduction, and high-quality output, making it a favorite among photographers who demand precision.",
+      "features": [
+        "Advanced demosaicing algorithms including AMaZE and LMMSE",
+        "Powerful noise reduction with multiple methods",
+        "Batch processing queue for high-volume workflows",
+        "Film simulation profiles for creative color grading",
+        "Flat-field and dark-frame correction for lens calibration",
+        "Non-destructive editing with sidecar file support"
+      ],
+      "website": "https://rawtherapee.com",
+      "installCommand": "sudo apt install rawtherapee",
+      "rating": 5
+    },
+    {
+      "name": "digiKam",
+      "description": "An advanced open-source photo management application that combines a feature-rich digital asset management system with capable image editing tools. digiKam uses AI-powered face recognition to automatically tag people in photos and supports managing large collections with hundreds of thousands of images efficiently.",
+      "features": [
+        "AI-powered face detection and recognition for auto-tagging",
+        "Database-backed catalog managing 100,000+ images",
+        "Built-in RAW processing and image editor",
+        "Geolocation support with interactive map view",
+        "Batch rename, resize, and convert tools",
+        "Duplicate image finder and quality sorter"
+      ],
+      "website": "https://www.digikam.org",
+      "installCommand": "sudo apt install digikam",
+      "rating": 4
+    }
+  ],
+  "verdict": "darktable is the strongest Lightroom alternative for Linux, offering a complete non-destructive RAW workflow with professional color management and GPU acceleration. RawTherapee is the go-to for photographers who want maximum control over RAW processing with its advanced demosaicing and noise reduction. digiKam rounds out the selection as the best option for large photo libraries, combining catalog management with AI-powered face tagging and solid editing tools.",
+  "seo": {
+    "title": "Free Adobe Lightroom Alternatives for Linux in 2026 | Open-Source RAW Editors",
+    "description": "Discover the best free and open-source Adobe Lightroom alternatives for Linux. Compare darktable, RawTherapee, and digiKam for professional RAW photo editing and management.",
+    "keywords": ["lightroom alternatives linux", "open source raw editor", "darktable", "rawtherapee", "digikam", "free lightroom replacement", "photo editing linux", "raw processing linux"]
+  }
+}

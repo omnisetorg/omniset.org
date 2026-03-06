@@ -1,0 +1,60 @@
+{
+  "title": "Free Figma Alternatives for Linux",
+  "slug": "figma",
+  "proprietary": {
+    "name": "Figma",
+    "description": "A browser-based collaborative interface design tool used by UI/UX designers for creating wireframes, prototypes, and design systems. Known for its real-time multiplayer collaboration, component libraries, and developer handoff features.",
+    "price": "$15/month per editor"
+  },
+  "alternatives": [
+    {
+      "name": "Penpot",
+      "description": "An open-source design and prototyping platform built for cross-domain teams. Penpot runs entirely in the browser, uses SVG as its native format for maximum interoperability, and supports real-time collaboration. It can be self-hosted for complete control over your design data and workflows.",
+      "features": [
+        "Real-time multiplayer collaboration in the browser",
+        "SVG-native format for standards-based interoperability",
+        "Self-hostable for complete data sovereignty",
+        "Interactive prototyping with flows and transitions",
+        "Shared component libraries and design systems support",
+        "CSS-ready inspect mode for developer handoff"
+      ],
+      "website": "https://penpot.app",
+      "rating": 5
+    },
+    {
+      "name": "Inkscape",
+      "description": "A mature, professional-quality open-source vector graphics editor that supports SVG as its primary format. While not a direct UI design tool like Figma, Inkscape provides powerful vector editing capabilities including path operations, node editing, and extensive filter effects, making it a versatile tool for creating UI assets, icons, and illustrations.",
+      "features": [
+        "Professional SVG editing with full specification support",
+        "Advanced path operations and boolean geometry tools",
+        "Extensive filter effects and blend modes",
+        "Built-in XML editor for direct SVG manipulation",
+        "Extension system with Python scripting support",
+        "Batch export for multiple formats including PNG, PDF, and EPS"
+      ],
+      "website": "https://inkscape.org",
+      "installCommand": "sudo apt install inkscape",
+      "rating": 4
+    },
+    {
+      "name": "Akira",
+      "description": "A native Linux application for UI and UX design, built from the ground up for the elementary OS and Linux desktop ecosystem. Akira aims to be a fast, lightweight alternative for interface design with a focus on vector-based layouts and component reuse. While still in active early development, it represents a promising native Linux design tool.",
+      "features": [
+        "Native Linux application with GTK-based interface",
+        "Vector-based UI design with artboard support",
+        "Built specifically for the Linux desktop ecosystem",
+        "Lightweight and fast performance on modest hardware",
+        "Component and symbol reuse for design consistency",
+        "Export to SVG and PNG formats"
+      ],
+      "website": "https://github.com/akiraux/Akira",
+      "rating": 3
+    }
+  ],
+  "verdict": "Penpot is the clear frontrunner as a Figma alternative for Linux, offering real-time collaboration, SVG-native design, and self-hosting in a fully open-source package. Inkscape is a powerhouse for vector editing and asset creation, though it lacks Figma-style collaboration and prototyping workflows. Akira is worth watching as an emerging native Linux UI design tool, but it is still early in development and not yet suitable for production design work.",
+  "seo": {
+    "title": "Free Figma Alternatives for Linux in 2026 | Open-Source UI Design Tools",
+    "description": "Discover the best free and open-source Figma alternatives for Linux. Compare Penpot, Inkscape, and Akira for collaborative UI/UX design, vector editing, and prototyping.",
+    "keywords": ["figma alternatives linux", "open source design tool", "penpot", "inkscape", "akira linux", "free figma replacement", "ui design linux", "vector design linux"]
+  }
+}

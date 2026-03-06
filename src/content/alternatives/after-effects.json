@@ -1,0 +1,62 @@
+{
+  "title": "Free After Effects Alternatives for Linux",
+  "slug": "after-effects",
+  "proprietary": {
+    "name": "Adobe After Effects",
+    "description": "Industry-standard motion graphics and visual effects software used in film, TV, and video production for compositing, animation, and post-production work.",
+    "price": "$22.99/month or $54.99/month (All Apps)"
+  },
+  "alternatives": [
+    {
+      "name": "Natron",
+      "description": "A powerful open-source compositing application with a node-based workflow similar to Nuke. Natron is designed for VFX artists who need professional-grade compositing, rotoscoping, and keying without a subscription.",
+      "features": [
+        "Node-based compositing workflow similar to Nuke",
+        "2D tracking and rotoscoping tools",
+        "Keying with built-in and community plugins",
+        "OpenFX plugin support for extensibility",
+        "Multi-view and stereoscopic compositing",
+        "EXR, PNG, TIFF, and many format support"
+      ],
+      "website": "https://natrongithub.github.io",
+      "installCommand": "sudo apt install natron",
+      "rating": 4
+    },
+    {
+      "name": "Blender",
+      "description": "A full-featured 3D creation suite that includes a powerful compositing engine, motion tracking, and motion graphics capabilities. Blender's compositor and Geometry Nodes make it a strong After Effects alternative for 3D-integrated VFX work.",
+      "features": [
+        "Node-based compositor with GPU acceleration",
+        "3D camera tracking and motion tracking",
+        "Geometry Nodes for procedural motion graphics",
+        "Grease Pencil for 2D animation within 3D space",
+        "Video sequence editor for basic editing",
+        "Python scripting for automation and custom effects"
+      ],
+      "website": "https://www.blender.org",
+      "installCommand": "sudo apt install blender",
+      "rating": 5
+    },
+    {
+      "name": "Synfig Studio",
+      "description": "A free and open-source 2D vector animation application designed for producing film-quality animation. Synfig uses a bone system, layers, and tweening to create smooth animations without frame-by-frame drawing.",
+      "features": [
+        "Vector-based tweening for smooth animations",
+        "Bone system for character rigging",
+        "50+ layer types including gradients and filters",
+        "Path-based animation and morphing",
+        "Sound layer support for syncing audio",
+        "Linked parameters for reusable animation setups"
+      ],
+      "website": "https://www.synfig.org",
+      "installCommand": "sudo apt install synfigstudio",
+      "rating": 3
+    }
+  ],
+  "verdict": "Blender is the most capable After Effects alternative on Linux, especially for motion graphics and 3D-integrated compositing work. Natron is the best choice for dedicated 2D compositing and VFX with its Nuke-like node-based workflow. Synfig Studio fills the niche for traditional 2D vector animation, though it lacks the broad VFX toolkit of the other two.",
+  "seo": {
+    "title": "Free After Effects Alternatives for Linux in 2026 | Motion Graphics & VFX",
+    "description": "Best free After Effects alternatives for Linux. Compare Natron, Blender, and Synfig Studio for compositing, motion graphics, and visual effects.",
+    "keywords": ["after effects alternative linux", "free motion graphics linux", "natron", "blender compositing", "synfig studio", "open source vfx", "linux animation software"]
+  }
+}

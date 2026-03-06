@@ -1,0 +1,61 @@
+{
+  "title": "Free Zoom Alternatives for Linux",
+  "slug": "zoom",
+  "proprietary": {
+    "name": "Zoom",
+    "description": "A widely used video conferencing platform known for its ease of use, reliable performance, and features like breakout rooms, virtual backgrounds, and cloud recording. Popular for both business meetings and personal calls.",
+    "price": "$13.33/month per user"
+  },
+  "alternatives": [
+    {
+      "name": "Jitsi Meet",
+      "description": "A fully open-source video conferencing solution that requires no account or download to join a meeting. Jitsi Meet supports high-quality video and audio, screen sharing, and can be self-hosted for complete privacy. It is the most accessible open-source alternative to Zoom, with public instances available for immediate use.",
+      "features": [
+        "No account or installation required to join meetings",
+        "End-to-end encryption support for secure calls",
+        "Self-hostable for full control over infrastructure",
+        "Screen sharing with presenter mode and remote control",
+        "Built-in chat, polls, and hand-raise features",
+        "Live streaming integration with YouTube and others"
+      ],
+      "website": "https://jitsi.org",
+      "installCommand": "sudo apt install jitsi-meet",
+      "rating": 5
+    },
+    {
+      "name": "BigBlueButton",
+      "description": "An open-source web conferencing system designed specifically for online learning and education. BigBlueButton provides a virtual classroom experience with an integrated whiteboard, breakout rooms, shared notes, and polling tools. It is widely used by universities and schools around the world.",
+      "features": [
+        "Multi-user interactive whiteboard with annotation tools",
+        "Breakout rooms for small group collaboration",
+        "Shared notes and real-time collaborative editing",
+        "Built-in polling and quiz functionality",
+        "Recording and playback of sessions",
+        "LMS integration with Moodle, Canvas, and Sakai"
+      ],
+      "website": "https://bigbluebutton.org",
+      "rating": 4
+    },
+    {
+      "name": "Element",
+      "description": "A decentralized communication platform built on the Matrix protocol, offering end-to-end encrypted messaging, voice calls, and video conferencing. Element can be self-hosted and federated, meaning different organizations can run their own servers while still communicating with each other seamlessly.",
+      "features": [
+        "End-to-end encryption for all communication by default",
+        "Decentralized and federated via the Matrix protocol",
+        "Self-hostable with full data sovereignty",
+        "Group video calls with screen sharing support",
+        "Bridging to Slack, Discord, IRC, and other platforms",
+        "Persistent chat rooms alongside voice and video"
+      ],
+      "website": "https://element.io",
+      "installCommand": "sudo apt install element-desktop",
+      "rating": 4
+    }
+  ],
+  "verdict": "Jitsi Meet is the best Zoom alternative for Linux users seeking a frictionless video conferencing experience -- it requires no accounts, runs in any browser, and can be self-hosted for maximum privacy. BigBlueButton is the top choice for educators needing virtual classroom features like whiteboards, breakout rooms, and LMS integration. Element with Matrix is ideal for organizations that want a permanent, decentralized communication platform combining persistent chat with voice and video calls.",
+  "seo": {
+    "title": "Free Zoom Alternatives for Linux in 2026 | Open-Source Video Conferencing",
+    "description": "Discover the best free and open-source Zoom alternatives for Linux. Compare Jitsi Meet, BigBlueButton, and Element for secure, self-hosted video conferencing and communication.",
+    "keywords": ["zoom alternatives linux", "open source video conferencing", "jitsi meet", "bigbluebutton", "element matrix", "free zoom replacement", "video calls linux", "self-hosted conferencing"]
+  }
+}

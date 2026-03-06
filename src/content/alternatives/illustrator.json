@@ -38,6 +38,20 @@
       "rating": 4
     },
     {
+      "name": "Affinity Designer",
+      "description": "Professional vector graphics editor by Canva (formerly Serif) and a direct competitor to Illustrator. Offers precise vector tools, pixel persona for raster work, and excellent performance. Available as a one-time purchase with Linux support announced and expected soon.",
+      "features": [
+        "Professional pen and node tools",
+        "Pixel persona for hybrid raster-vector workflows",
+        "Advanced grid and snapping system",
+        "Symbols and constraints for reusable components",
+        "Export personas for batch asset export",
+        "One-time purchase — no subscription"
+      ],
+      "website": "https://affinity.serif.com/designer/",
+      "rating": 5
+    },
+    {
       "name": "Karbon",
       "description": "A lightweight vector drawing application that is part of the Calligra Suite. Karbon provides essential vector editing tools in a clean, accessible interface. It is suitable for users who need straightforward vector graphics creation without the complexity of a full-featured design suite.",
       "features": [
@@ -53,7 +67,7 @@
       "rating": 3
     }
   ],
-  "verdict": "Inkscape is the clear standout as a free Illustrator alternative for Linux, offering professional-grade vector editing with comprehensive SVG support. Krita is an excellent choice for illustrators who blend raster and vector workflows, particularly for concept art and comics. Karbon is a solid lightweight option for users who need basic vector editing without the overhead of a larger application.",
+  "verdict": "Inkscape is the best free Illustrator alternative for Linux with professional-grade SVG editing. Affinity Designer is the top paid option — a one-time purchase with a polished UI and Linux support coming soon. Krita excels for illustrators blending raster and vector workflows. Karbon is a lightweight option for basic vector editing.",
   "seo": {
     "title": "Free Adobe Illustrator Alternatives for Linux in 2026 | Vector Graphics Editors",
     "description": "Find the best free and open-source Adobe Illustrator alternatives for Linux. Compare Inkscape, Krita, and Karbon for professional vector graphics editing.",

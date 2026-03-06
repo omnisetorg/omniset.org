@@ -1,0 +1,74 @@
+{
+  "title": "Free Notion Alternatives for Linux",
+  "slug": "notion",
+  "proprietary": {
+    "name": "Notion",
+    "description": "An all-in-one workspace combining notes, databases, kanban boards, wikis, and project management. Popular for personal knowledge management and team collaboration, Notion blends documents and structured data into a flexible, block-based interface.",
+    "price": "$10/month per user"
+  },
+  "alternatives": [
+    {
+      "name": "Obsidian",
+      "description": "A powerful knowledge base application that works on top of plain-text Markdown files stored locally on your device. Obsidian excels at building interconnected notes through bidirectional linking and offers a rich plugin ecosystem that extends its functionality far beyond simple note-taking.",
+      "features": [
+        "Local-first storage with plain Markdown files",
+        "Bidirectional linking and interactive graph view",
+        "Extensive community plugin ecosystem with 1000+ plugins",
+        "Canvas for visual brainstorming and spatial note-taking",
+        "Customizable themes and CSS snippets",
+        "Full-text search with regex support"
+      ],
+      "website": "https://obsidian.md",
+      "rating": 5
+    },
+    {
+      "name": "Logseq",
+      "description": "A privacy-first, open-source knowledge management and collaboration platform built around an outliner workflow. Logseq stores everything in local Markdown and Org-mode files, supports bidirectional references, and offers a block-level structure ideal for networked thinking and daily journaling.",
+      "features": [
+        "Open-source and fully local-first architecture",
+        "Outliner-based block editing with bidirectional links",
+        "Built-in graph view for visualizing knowledge connections",
+        "Daily journal workflow for capturing thoughts over time",
+        "PDF annotation and highlighting support",
+        "Whiteboard feature for visual thinking and diagramming"
+      ],
+      "website": "https://logseq.com",
+      "rating": 5
+    },
+    {
+      "name": "Joplin",
+      "description": "An open-source note-taking and to-do application with synchronization capabilities across multiple devices. Joplin supports Markdown editing, end-to-end encryption for secure cloud sync, and can import notes from Evernote. It works well as a straightforward, privacy-respecting notes solution.",
+      "features": [
+        "End-to-end encrypted synchronization across devices",
+        "Markdown editor with rich-text preview",
+        "Web clipper browser extension for saving articles",
+        "Notebook and tag-based organization system",
+        "Sync via Nextcloud, Dropbox, OneDrive, or Joplin Cloud",
+        "Plugin system for extending core functionality"
+      ],
+      "website": "https://joplinapp.org",
+      "installCommand": "sudo apt install joplin",
+      "rating": 4
+    },
+    {
+      "name": "AppFlowy",
+      "description": "An open-source alternative to Notion that aims to replicate its block-based editing experience while keeping your data under your control. AppFlowy offers documents, databases, kanban boards, and a calendar view, all in a native application that can be self-hosted for complete data sovereignty.",
+      "features": [
+        "Open-source Notion-style block editor",
+        "Built-in database views including grid, kanban, and calendar",
+        "Self-hostable for full data ownership and control",
+        "Native desktop application with fast performance",
+        "Real-time collaboration support",
+        "Customizable templates for documents and projects"
+      ],
+      "website": "https://appflowy.io",
+      "rating": 4
+    }
+  ],
+  "verdict": "Obsidian is the top pick for Linux users who want a mature, extensible knowledge base with an unmatched plugin ecosystem and local Markdown storage. Logseq is ideal for those who prefer an outliner workflow and fully open-source tools. Joplin shines for encrypted cross-device syncing, while AppFlowy is the best choice if you want a direct Notion-like experience with databases and kanban boards in an open-source package.",
+  "seo": {
+    "title": "Free Notion Alternatives for Linux in 2026 | Open-Source Note-Taking & Wikis",
+    "description": "Discover the best free and open-source Notion alternatives for Linux. Compare Obsidian, Logseq, Joplin, and AppFlowy for local-first note-taking, knowledge management, and project organization.",
+    "keywords": ["notion alternatives linux", "open source note taking", "obsidian linux", "logseq", "joplin", "appflowy", "free notion replacement", "knowledge management linux"]
+  }
+}

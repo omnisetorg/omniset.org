@@ -1,0 +1,76 @@
+{
+  "title": "Free MATLAB Alternatives for Linux",
+  "slug": "matlab",
+  "proprietary": {
+    "name": "MATLAB",
+    "description": "A numerical computing environment and programming language developed by MathWorks, widely used in engineering, science, and academia for data analysis, algorithm development, and mathematical modeling.",
+    "price": "$99/year (academic) or ~$2,150 (commercial perpetual license)"
+  },
+  "alternatives": [
+    {
+      "name": "GNU Octave",
+      "description": "A free, open-source scientific programming language that is largely compatible with MATLAB syntax. Octave is designed as a drop-in replacement for MATLAB, making it ideal for users who want to run existing MATLAB scripts without modification.",
+      "features": [
+        "Highly compatible MATLAB syntax and functions",
+        "Built-in 2D and 3D plotting with Gnuplot and Qt",
+        "Linear algebra, signal processing, and optimization",
+        "GUI with integrated editor and workspace browser",
+        "Octave Forge packages extending functionality",
+        "Runs most MATLAB .m files without changes"
+      ],
+      "website": "https://octave.org",
+      "installCommand": "sudo apt install octave",
+      "rating": 5
+    },
+    {
+      "name": "Python with SciPy/NumPy",
+      "description": "Python combined with the SciPy and NumPy libraries provides a powerful free scientific computing stack. With Jupyter notebooks, matplotlib, and pandas, Python has become the dominant open-source alternative to MATLAB across academia and industry.",
+      "features": [
+        "NumPy for fast N-dimensional array operations",
+        "SciPy for optimization, integration, and signal processing",
+        "Matplotlib and Plotly for publication-quality plotting",
+        "Jupyter notebooks for interactive computing",
+        "Pandas for data manipulation and analysis",
+        "Massive ecosystem with thousands of scientific packages"
+      ],
+      "website": "https://scipy.org",
+      "installCommand": "sudo apt install python3-numpy python3-scipy python3-matplotlib",
+      "rating": 5
+    },
+    {
+      "name": "Julia",
+      "description": "A high-performance, open-source programming language designed specifically for numerical and scientific computing. Julia combines the ease of Python with the speed of C, making it ideal for computationally intensive tasks like simulations and machine learning.",
+      "features": [
+        "Near-C speed with just-in-time LLVM compilation",
+        "Built-in parallel and distributed computing",
+        "Multiple dispatch as a core language paradigm",
+        "Direct calling of C and Fortran libraries",
+        "Rich package ecosystem for scientific computing",
+        "Interactive REPL and Jupyter notebook support"
+      ],
+      "website": "https://julialang.org",
+      "rating": 4
+    },
+    {
+      "name": "R",
+      "description": "A free programming language and environment for statistical computing, data analysis, and visualization. R is the standard in statistics and biostatistics, offering unmatched capabilities for data exploration and reproducible research.",
+      "features": [
+        "Comprehensive statistical analysis functions",
+        "ggplot2 for advanced data visualization",
+        "CRAN repository with over 20,000 packages",
+        "RStudio IDE for an integrated workflow",
+        "R Markdown for reproducible reports and papers",
+        "Strong support for machine learning and bioinformatics"
+      ],
+      "website": "https://www.r-project.org",
+      "installCommand": "sudo apt install r-base",
+      "rating": 4
+    }
+  ],
+  "verdict": "GNU Octave is the closest drop-in replacement for MATLAB and the best choice for running existing MATLAB code. Python with SciPy/NumPy has surpassed MATLAB in many fields thanks to its massive ecosystem and general-purpose flexibility. Julia offers the best raw performance for heavy numerical work. R is unmatched for pure statistics and data visualization.",
+  "seo": {
+    "title": "Free MATLAB Alternatives for Linux in 2026 | Scientific Computing",
+    "description": "Best free MATLAB alternatives for Linux. Compare GNU Octave, Python SciPy, Julia, and R for scientific computing, data analysis, and numerical programming.",
+    "keywords": ["matlab alternative linux", "gnu octave", "scipy numpy", "julia language", "r programming", "free scientific computing", "open source matlab replacement"]
+  }
+}
