@@ -1,0 +1,19 @@
+{
+  "term": "Chmod",
+  "slug": "chmod",
+  "shortDefinition": "A command used to change the access permissions of files and directories on Linux and Unix-like systems.",
+  "longDefinition": "Chmod (change mode) is a Linux and Unix command used to modify the file system access permissions of files and directories. Linux uses a permission model based on three categories of users: the file owner (user), the group, and others. Each category can be granted read (r), write (w), and execute (x) permissions. Chmod supports two notation styles: symbolic notation (e.g., u+x to add execute permission for the owner) and octal notation (e.g., 755 to set rwxr-xr-x). Proper file permissions are critical for system security, as they control who can read sensitive files, modify configurations, or execute scripts and programs. Chmod is one of the most fundamental commands for Linux system administration and is frequently used alongside chown (change owner) and chgrp (change group).",
+  "category": "Users & Permissions",
+  "relatedTerms": ["root", "sudo", "bash", "terminal", "cli"],
+  "examples": [
+    "chmod +x script.sh - Make a script file executable",
+    "chmod 755 /var/www/html - Set directory permissions to rwxr-xr-x (owner full, others read and execute)",
+    "chmod -R 644 /home/user/docs/ - Recursively set file permissions to rw-r--r-- for all files in a directory",
+    "chmod u+rw,go-w file.txt - Add read and write for the owner, remove write for group and others"
+  ],
+  "seo": {
+    "title": "What is Chmod? | Linux File Permissions Command Explained",
+    "description": "Learn what chmod is, how file permissions work in Linux, and how to use symbolic and octal notation to manage access control.",
+    "keywords": ["chmod", "what is chmod", "chmod linux", "linux file permissions", "chmod 755", "chmod command"]
+  }
+}

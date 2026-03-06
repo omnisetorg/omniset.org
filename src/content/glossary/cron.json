@@ -1,0 +1,19 @@
+{
+  "term": "Cron",
+  "slug": "cron",
+  "shortDefinition": "A time-based job scheduler on Linux that automatically runs scripts and commands at specified intervals.",
+  "longDefinition": "Cron is a time-based job scheduling daemon found on Linux and Unix-like operating systems. It allows users and system administrators to schedule commands, scripts, and programs to run automatically at specified times, dates, or intervals. Scheduled tasks are defined in a configuration file called a crontab (cron table), where each line specifies a timing pattern followed by the command to execute. The timing pattern consists of five fields: minute, hour, day of month, month, and day of week. Cron is widely used for automating system maintenance tasks such as log rotation, database backups, software updates, disk cleanup, and monitoring scripts. Each user can have their own crontab, and system-wide cron jobs are stored in /etc/crontab and the /etc/cron.d/ directory. On systems using systemd, systemd timers provide an alternative to cron with additional features like logging and dependency management.",
+  "category": "System Administration",
+  "relatedTerms": ["daemon", "bash", "terminal", "cli", "root", "sudo"],
+  "examples": [
+    "crontab -e - Open and edit your personal crontab file",
+    "crontab -l - List all scheduled cron jobs for the current user",
+    "0 2 * * * /home/user/backup.sh - Schedule a backup script to run every day at 2:00 AM",
+    "*/5 * * * * /usr/bin/check-disk.sh - Run a disk check script every 5 minutes"
+  ],
+  "seo": {
+    "title": "What is Cron? | Linux Task Scheduler Explained",
+    "description": "Learn what cron is, how to use crontab to schedule automated tasks on Linux, and see practical examples of cron job configurations.",
+    "keywords": ["cron", "what is cron", "crontab", "linux scheduler", "cron job", "cron linux", "scheduled tasks linux"]
+  }
+}

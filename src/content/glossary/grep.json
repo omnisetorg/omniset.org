@@ -1,0 +1,19 @@
+{
+  "term": "Grep",
+  "slug": "grep",
+  "shortDefinition": "A command-line utility for searching plain-text data for lines that match a regular expression or fixed string.",
+  "longDefinition": "Grep (Global Regular Expression Print) is a powerful command-line utility used to search through text files and streams for lines that match a specified pattern. Originally written for Unix, grep is available on all Linux distributions and is one of the most frequently used commands in day-to-day system administration and development. It supports basic regular expressions by default, with extended regular expressions available via the -E flag (or the egrep variant). Grep can search single files, multiple files, entire directory trees recursively, and can be combined with other commands through pipes. Common use cases include searching log files for errors, filtering command output, finding configuration values, and processing text data. Modern alternatives like ripgrep offer faster performance, but grep remains the universal standard.",
+  "category": "Shell & Command Line",
+  "relatedTerms": ["bash", "terminal", "cli", "sudo"],
+  "examples": [
+    "grep 'error' /var/log/syslog - Search for the word 'error' in the system log",
+    "grep -r 'TODO' /home/user/project/ - Recursively search all files in a directory for 'TODO'",
+    "ps aux | grep nginx - Filter the running process list to find nginx processes",
+    "grep -i -n 'function' script.js - Case-insensitive search showing line numbers for matches"
+  ],
+  "seo": {
+    "title": "What is Grep? | Linux Text Search Command Explained",
+    "description": "Learn what grep is, how to use it for searching text and files in Linux, and see practical examples of regular expression matching.",
+    "keywords": ["grep", "what is grep", "grep linux", "grep command", "search text linux", "grep regex"]
+  }
+}

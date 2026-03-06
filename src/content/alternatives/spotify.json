@@ -1,0 +1,62 @@
+{
+  "title": "Free Spotify Alternatives for Linux",
+  "slug": "spotify",
+  "proprietary": {
+    "name": "Spotify",
+    "description": "The world's most popular music streaming service offering access to millions of songs, podcasts, and playlists. While a Linux client exists, it is not officially supported and requires a subscription for an ad-free experience.",
+    "price": "$11.99/month"
+  },
+  "alternatives": [
+    {
+      "name": "Rhythmbox",
+      "description": "The default music player for the GNOME desktop environment, Rhythmbox is a mature and reliable application for managing and playing local music libraries. It supports internet radio, podcasts, and last.fm scrobbling, and can be extended with plugins for additional functionality.",
+      "features": [
+        "Automatic music library organization and browsing",
+        "Internet radio station streaming",
+        "Podcast subscription and management",
+        "Last.fm scrobbling and audioscrobbler support",
+        "Plugin system for extended functionality",
+        "Audio CD playback and ripping"
+      ],
+      "website": "https://wiki.gnome.org/Apps/Rhythmbox",
+      "installCommand": "sudo apt install rhythmbox",
+      "rating": 4
+    },
+    {
+      "name": "Audacious",
+      "description": "A lightweight, high-performance audio player focused on low resource usage and high audio quality. Audacious supports a wide range of audio formats and offers both a modern GTK interface and a classic Winamp-style skinned interface. It is an excellent choice for users who want a fast, no-frills music player.",
+      "features": [
+        "Extremely lightweight with minimal resource usage",
+        "Support for MP3, FLAC, AAC, OGG, and many more formats",
+        "Classic Winamp-style skinned interface option",
+        "Built-in equalizer and audio effects",
+        "Gapless playback for seamless album listening",
+        "Playlist management with search and filtering"
+      ],
+      "website": "https://audacious-media-player.org",
+      "installCommand": "sudo apt install audacious",
+      "rating": 4
+    },
+    {
+      "name": "Lollypop",
+      "description": "A modern, visually polished music player designed for the GNOME desktop. Lollypop features automatic album art fetching, online lyrics, and integration with web sources for artist information. It provides a sleek, Spotify-like browsing experience for your local music collection.",
+      "features": [
+        "Modern, visually appealing GNOME-native interface",
+        "Automatic album art and artist image downloading",
+        "Online lyrics display during playback",
+        "Party mode and shuffle by artist or genre",
+        "MTP device sync for portable music players",
+        "Web radio and ReplayGain support"
+      ],
+      "website": "https://wiki.gnome.org/Apps/Lollypop",
+      "installCommand": "sudo apt install lollypop",
+      "rating": 4
+    }
+  ],
+  "verdict": "While none of these alternatives replicate Spotify's streaming catalog, they excel at managing and playing local music libraries. Lollypop delivers the most modern, Spotify-like browsing experience with its polished GNOME interface. Rhythmbox is a reliable all-rounder with podcast and internet radio support. Audacious is the best pick for users who prioritize performance and audio quality above all else.",
+  "seo": {
+    "title": "Free Spotify Alternatives for Linux in 2026 | Open-Source Music Players",
+    "description": "Explore the best free and open-source Spotify alternatives for Linux. Compare Rhythmbox, Audacious, and Lollypop for managing and playing your music library.",
+    "keywords": ["spotify alternatives linux", "open source music player", "rhythmbox", "audacious", "lollypop", "free music player linux", "gnome music player"]
+  }
+}

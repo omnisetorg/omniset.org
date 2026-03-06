@@ -1,0 +1,106 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@layouts/BaseLayout.astro';
+import JsonLd from '@components/seo/JsonLd.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
+import { marked } from 'marked';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.data.slug },
+    props: { post: post.data }
+  }));
+}
+
+const { post } = Astro.props;
+const contentHtml = marked.parse(post.content);
+
+function readingTime(content: string): string {
+  const words = content.split(/\s+/).length;
+  const minutes = Math.ceil(words / 200);
+  return `${minutes} min read`;
+}
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://omniset.org" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://omniset.org/blog/" },
+    { "@type": "ListItem", "position": 3, "name": post.title, "item": `https://omniset.org/blog/${post.slug}/` }
+  ]
+};
+
+const blogPostingSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": post.title,
+  "description": post.description,
+  "datePublished": post.date,
+  "author": {
+    "@type": "Organization",
+    "name": post.author
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "OmniSet"
+  }
+};
+---
+
+<BaseLayout
+  title={post.seo.title}
+  description={post.seo.description}
+  canonical={`https://omniset.org/blog/${post.slug}/`}
+  ogType="article"
+>
+  <Fragment slot="head">
+    <JsonLd schema={breadcrumbSchema} />
+    <JsonLd schema={blogPostingSchema} />
+    {post.seo.keywords && <meta name="keywords" content={post.seo.keywords.join(', ')} />}
+  </Fragment>
+
+  <section class="py-20 bg-gradient-hero text-white">
+    <div class="container mx-auto px-6">
+      <div class="max-w-3xl mx-auto">
+        <Breadcrumb items={[
+          { label: 'Home', href: '/' },
+          { label: 'Blog', href: '/blog/' },
+          { label: post.title }
+        ]} />
+        <div class="flex flex-wrap items-center gap-3 text-sm text-white/70 mb-4">
+          <time datetime={post.date}>{new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+          <span>&middot;</span>
+          <span>{readingTime(post.content)}</span>
+          <span>&middot;</span>
+          <span>{post.author}</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">{post.title}</h1>
+        <p class="text-xl text-white/80">{post.description}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="max-w-3xl mx-auto">
+        <div class="prose prose-lg max-w-none prose-content" set:html={contentHtml} />
+
+        <div class="mt-12 pt-8 border-t border-gray-200">
+          <div class="flex flex-wrap gap-2 mb-8">
+            {post.tags.map((tag: string) => (
+              <span class="text-sm px-3 py-1 bg-orange-100 text-orange-700 rounded-full">{tag}</span>
+            ))}
+          </div>
+          <a href="/blog/" class="inline-flex items-center gap-2 text-orange-600 hover:text-orange-700 font-medium">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+            Back to all posts
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

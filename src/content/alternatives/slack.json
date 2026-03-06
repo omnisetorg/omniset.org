@@ -1,0 +1,62 @@
+{
+  "title": "Free Slack Alternatives for Linux",
+  "slug": "slack",
+  "proprietary": {
+    "name": "Slack",
+    "description": "A widely used team communication platform offering channels, direct messaging, file sharing, and integrations with hundreds of third-party services. Popular in workplaces for real-time collaboration.",
+    "price": "$7.25/month per user"
+  },
+  "alternatives": [
+    {
+      "name": "Element",
+      "description": "A decentralized, open-source messaging app built on the Matrix protocol. Element provides end-to-end encrypted messaging, voice, and video calls with full control over your data. It supports bridging to other platforms like Slack, Discord, and IRC, making it a powerful and privacy-focused communication hub.",
+      "features": [
+        "End-to-end encryption by default",
+        "Decentralized architecture via Matrix protocol",
+        "Bridging support for Slack, Discord, IRC, and more",
+        "Voice and video conferencing",
+        "Self-hosting option for complete data ownership",
+        "Spaces for organizing rooms and communities"
+      ],
+      "website": "https://element.io",
+      "installCommand": "sudo apt install element-desktop",
+      "rating": 5
+    },
+    {
+      "name": "Rocket.Chat",
+      "description": "A fully open-source team communication platform that offers channels, direct messaging, video conferencing, and extensive customization options. Rocket.Chat can be self-hosted for maximum control and supports integrations with tools like Jira, GitHub, and GitLab.",
+      "features": [
+        "Real-time messaging with channels and threads",
+        "Built-in video and audio conferencing",
+        "Self-hosted or cloud deployment options",
+        "Extensive API and webhook integrations",
+        "End-to-end encryption support",
+        "Customizable with plugins and apps marketplace"
+      ],
+      "website": "https://www.rocket.chat",
+      "installCommand": "sudo apt install rocketchat-server",
+      "rating": 4
+    },
+    {
+      "name": "Mattermost",
+      "description": "An open-source, self-hosted alternative to Slack designed for developer and DevOps teams. Mattermost offers threaded messaging, file sharing, powerful search, and deep integrations with developer tools. It emphasizes security, compliance, and data sovereignty.",
+      "features": [
+        "Threaded messaging and organized channels",
+        "Deep integrations with GitLab, Jenkins, and Jira",
+        "Self-hosted with full data control",
+        "Playbooks for incident management and workflows",
+        "Highly extensible plugin architecture",
+        "Markdown support and code snippet sharing"
+      ],
+      "website": "https://mattermost.com",
+      "installCommand": "sudo apt install mattermost-desktop",
+      "rating": 4
+    }
+  ],
+  "verdict": "Element stands out as the top Slack alternative for Linux users who value privacy and decentralization, thanks to its Matrix-based architecture and end-to-end encryption. For teams seeking a more traditional Slack-like experience with self-hosting, both Rocket.Chat and Mattermost are excellent choices, with Mattermost particularly well-suited for developer-focused workflows.",
+  "seo": {
+    "title": "Free Slack Alternatives for Linux in 2026 | Open-Source Team Chat",
+    "description": "Discover the best free and open-source Slack alternatives for Linux. Compare Element, Rocket.Chat, and Mattermost for secure, self-hosted team communication.",
+    "keywords": ["slack alternatives linux", "open source team chat", "element matrix", "rocket.chat", "mattermost", "self-hosted messaging", "free slack replacement"]
+  }
+}

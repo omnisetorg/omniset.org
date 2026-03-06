@@ -1,0 +1,19 @@
+{
+  "term": "Mount",
+  "slug": "mount",
+  "shortDefinition": "The process of making a filesystem accessible at a specific directory location in the Linux directory tree.",
+  "longDefinition": "Mounting is the process of attaching a filesystem (from a hard drive, USB drive, network share, or disk image) to a specific directory (called a mount point) in the Linux directory tree, making its contents accessible to the operating system and users. In Linux, everything is organized under a single root directory (/), and storage devices must be mounted to a directory within this tree before their files can be accessed. The mount command handles this process, and the /etc/fstab file defines filesystems that should be automatically mounted at boot time. Common mount points include /home for user data, /boot for boot files, and /mnt or /media for removable devices. Modern desktop environments automatically mount USB drives and optical discs, but manual mounting is still common for network shares (NFS, SMB), disk images, and server administration. The umount command is used to safely detach a mounted filesystem.",
+  "category": "Filesystem",
+  "relatedTerms": ["partition", "kernel", "root", "sudo", "symlink"],
+  "examples": [
+    "sudo mount /dev/sdb1 /mnt/usb - Mount a USB drive partition to the /mnt/usb directory",
+    "mount | column -t - Display all currently mounted filesystems in a formatted table",
+    "sudo umount /mnt/usb - Safely unmount a filesystem before removing the device",
+    "sudo mount -o loop image.iso /mnt/iso - Mount an ISO disc image as a loop device"
+  ],
+  "seo": {
+    "title": "What is Mount in Linux? | Filesystem Mounting Explained",
+    "description": "Learn what mounting is in Linux, how to attach filesystems to the directory tree, and how to use the mount command and fstab for storage management.",
+    "keywords": ["mount linux", "what is mount", "mount command", "linux filesystem mount", "fstab", "mount drive linux"]
+  }
+}

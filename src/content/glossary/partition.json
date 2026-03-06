@@ -1,0 +1,19 @@
+{
+  "term": "Partition",
+  "slug": "partition",
+  "shortDefinition": "A logically divided section of a hard drive or storage device that is treated as an independent unit by the operating system.",
+  "longDefinition": "A partition is a logically defined section of a physical storage device (such as a hard drive or SSD) that the operating system treats as a separate, independent unit. Partitioning allows a single physical disk to be divided into multiple sections, each of which can have its own filesystem, serve a different purpose, or even host a different operating system. On Linux, common partitions include the root partition (/) containing the operating system, a /home partition for user data, a swap partition for virtual memory, and a /boot partition for bootloader files. Linux supports multiple partition table formats, including MBR (Master Boot Record) for legacy systems and GPT (GUID Partition Table) for modern UEFI systems. Tools like fdisk, parted, and GParted are used to create, resize, and manage partitions. Proper partitioning is an important consideration during Linux installation and affects system performance, organization, and recovery options.",
+  "category": "Filesystem",
+  "relatedTerms": ["mount", "kernel", "distro", "root", "symlink"],
+  "examples": [
+    "lsblk - List all block devices and their partitions in a tree view",
+    "sudo fdisk -l - Display detailed partition table information for all disks",
+    "sudo parted /dev/sda print - Show partition layout of a specific disk using parted",
+    "df -h - Display disk space usage for all mounted partitions in human-readable format"
+  ],
+  "seo": {
+    "title": "What is a Partition in Linux? | Disk Partitioning Explained",
+    "description": "Learn what a disk partition is in Linux, why partitioning matters, and how to create and manage partitions with fdisk, parted, and GParted.",
+    "keywords": ["partition linux", "what is a partition", "disk partition", "linux partitioning", "fdisk", "gparted", "partition table"]
+  }
+}

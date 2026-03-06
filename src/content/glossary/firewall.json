@@ -1,0 +1,19 @@
+{
+  "term": "Firewall",
+  "slug": "firewall",
+  "shortDefinition": "A network security system that monitors and controls incoming and outgoing traffic based on defined rules.",
+  "longDefinition": "A firewall in Linux is a network security system that monitors and filters incoming and outgoing network traffic based on a set of predefined rules. It acts as a barrier between a trusted internal network and untrusted external networks such as the internet. The Linux kernel includes a built-in firewall framework called Netfilter, which is configured through user-space tools. The traditional tool is iptables, which provides fine-grained control over packet filtering, network address translation (NAT), and port forwarding. Modern Linux distributions have moved toward nftables as the successor to iptables, offering improved performance and a cleaner syntax. Many distributions also provide simplified frontend tools such as UFW (Uncomplicated Firewall) on Ubuntu and firewalld on Fedora and RHEL. Properly configuring a firewall is essential for securing Linux servers and workstations, controlling which services are accessible from the network, and preventing unauthorized access.",
+  "category": "Networking & Security",
+  "relatedTerms": ["ssh", "root", "sudo", "daemon", "kernel", "cli"],
+  "examples": [
+    "sudo ufw enable - Enable the UFW firewall on Ubuntu",
+    "sudo ufw allow 22/tcp - Allow incoming SSH connections through the firewall",
+    "sudo ufw status verbose - Display all active firewall rules and their details",
+    "sudo firewall-cmd --add-service=http --permanent - Allow HTTP traffic through firewalld on Fedora/RHEL"
+  ],
+  "seo": {
+    "title": "What is a Firewall in Linux? | Network Security Explained",
+    "description": "Learn what a firewall is in Linux, how iptables, nftables, UFW, and firewalld work, and how to configure firewall rules to secure your system.",
+    "keywords": ["firewall linux", "what is firewall", "linux firewall", "ufw", "iptables", "firewalld", "network security linux"]
+  }
+}

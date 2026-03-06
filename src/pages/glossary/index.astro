@@ -36,7 +36,7 @@ const grouped = sortedItems.reduce((acc, item) => {
         <div class="flex flex-wrap gap-2 mb-12 justify-center">
           {Object.keys(grouped).sort().map((letter) => (
             <a href={`#${letter}`}
-               class="w-10 h-10 flex items-center justify-center rounded-lg bg-gray-100 hover:bg-indigo-100 text-gray-700 hover:text-indigo-600 font-semibold transition-colors">
+               class="w-10 h-10 flex items-center justify-center rounded-lg bg-gray-100 hover:bg-orange-100 text-gray-700 hover:text-orange-600 font-semibold transition-colors">
               {letter}
             </a>
           ))}
@@ -46,12 +46,12 @@ const grouped = sortedItems.reduce((acc, item) => {
         <div class="space-y-12">
           {Object.entries(grouped).sort(([a], [b]) => a.localeCompare(b)).map(([letter, items]) => (
             <div id={letter}>
-              <h2 class="text-3xl font-bold text-indigo-600 mb-6 pb-2 border-b border-gray-200">{letter}</h2>
+              <h2 class="text-3xl font-bold text-orange-600 mb-6 pb-2 border-b border-gray-200">{letter}</h2>
               <div class="space-y-4">
                 {items.map((item) => (
                   <a href={`/glossary/${item.data.slug}/`}
                      class="block p-4 rounded-xl hover:bg-gray-50 transition-colors group">
-                    <h3 class="text-lg font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors">
+                    <h3 class="text-lg font-semibold text-gray-900 group-hover:text-orange-600 transition-colors">
                       {item.data.term}
                     </h3>
                     <p class="text-gray-600 text-sm mt-1">{item.data.shortDefinition}</p>

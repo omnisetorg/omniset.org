@@ -1,0 +1,19 @@
+{
+  "term": "Root",
+  "slug": "root",
+  "shortDefinition": "The superuser account on Linux systems with unrestricted access to all commands, files, and system resources.",
+  "longDefinition": "Root is the superuser or administrator account on Linux and Unix-like operating systems. The root user has a user ID (UID) of 0 and possesses unrestricted access to every file, command, and system resource on the machine. This includes the ability to modify system files, install and remove software, manage user accounts, change file permissions, and configure hardware. Because of the power the root account holds, directly logging in as root is discouraged in most modern Linux distributions. Instead, users are encouraged to use tools like sudo to temporarily elevate privileges for specific commands. The term 'root' also refers to the top-level directory of the Linux filesystem, denoted by a forward slash (/), which is the starting point from which all other directories branch.",
+  "category": "Users & Permissions",
+  "relatedTerms": ["sudo", "chmod", "terminal", "bash", "firewall"],
+  "examples": [
+    "sudo -i - Open an interactive root shell session",
+    "whoami - Check if you are currently operating as root",
+    "su - Switch to the root user account (requires root password)",
+    "sudo passwd root - Set or change the root user password"
+  ],
+  "seo": {
+    "title": "What is Root in Linux? | Superuser Account Explained",
+    "description": "Learn what the root user is in Linux, why it has unrestricted system access, and how to safely use root privileges with sudo.",
+    "keywords": ["root linux", "what is root", "linux superuser", "root user", "root account linux", "root vs sudo"]
+  }
+}

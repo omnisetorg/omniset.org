@@ -1,0 +1,62 @@
+{
+  "title": "Free AutoCAD Alternatives for Linux",
+  "slug": "autocad",
+  "proprietary": {
+    "name": "AutoCAD",
+    "description": "The industry-standard computer-aided design software developed by Autodesk, used by architects, engineers, and designers for creating precise 2D and 3D technical drawings and models.",
+    "price": "$245/month"
+  },
+  "alternatives": [
+    {
+      "name": "FreeCAD",
+      "description": "A powerful, open-source parametric 3D CAD modeler designed for mechanical engineering, product design, and architecture. FreeCAD supports a wide range of file formats and features a modular architecture with workbenches tailored to specific tasks such as part design, assembly, and FEM analysis.",
+      "features": [
+        "Parametric modeling with full constraint-based sketching",
+        "Modular workbench system for specialized tasks",
+        "FEM analysis workbench for structural simulation",
+        "STEP, IGES, STL, DXF, and OBJ format support",
+        "Python scripting for automation and macros",
+        "BIM and architectural design workbench"
+      ],
+      "website": "https://www.freecad.org",
+      "installCommand": "sudo apt install freecad",
+      "rating": 5
+    },
+    {
+      "name": "LibreCAD",
+      "description": "A free, open-source 2D CAD application built for creating precise technical drawings. LibreCAD is a great alternative for users who primarily work with 2D drafting and do not need full 3D modeling capabilities. Its interface will feel familiar to anyone who has used AutoCAD's 2D environment.",
+      "features": [
+        "Full-featured 2D drafting and design tools",
+        "DXF and DWG file format compatibility",
+        "Layer management with customizable properties",
+        "Comprehensive snapping and dimensioning tools",
+        "Block library for reusable components",
+        "Command-line interface for precise input"
+      ],
+      "website": "https://librecad.org",
+      "installCommand": "sudo apt install librecad",
+      "rating": 4
+    },
+    {
+      "name": "OpenSCAD",
+      "description": "A unique, script-based 3D CAD modeler where models are created by writing code rather than interactive manipulation. OpenSCAD is ideal for engineers and makers who prefer a programmatic approach to design, and it excels at creating precise, parametric parts for 3D printing.",
+      "features": [
+        "Script-based modeling using its own description language",
+        "CSG (Constructive Solid Geometry) and extrusion operations",
+        "Parametric designs with variables and functions",
+        "STL and OFF export for 3D printing",
+        "Customizer interface for adjusting parameters visually",
+        "Cross-platform with consistent behavior"
+      ],
+      "website": "https://openscad.org",
+      "installCommand": "sudo apt install openscad",
+      "rating": 4
+    }
+  ],
+  "verdict": "FreeCAD is the most comprehensive free AutoCAD alternative for Linux, offering parametric 3D modeling, FEM analysis, and BIM support in a single application. LibreCAD is the best choice for users focused on 2D drafting with a familiar AutoCAD-like workflow. OpenSCAD fills a unique niche for programmers and engineers who prefer defining geometry through code, making it especially valuable for parametric designs and 3D printing.",
+  "seo": {
+    "title": "Free AutoCAD Alternatives for Linux in 2026 | Open-Source CAD Software",
+    "description": "Discover the best free and open-source AutoCAD alternatives for Linux. Compare FreeCAD, LibreCAD, and OpenSCAD for 2D drafting and 3D modeling.",
+    "keywords": ["autocad alternatives linux", "open source cad", "freecad", "librecad", "openscad", "free cad software linux", "3d modeling linux"]
+  }
+}

@@ -1,0 +1,70 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Privacy Policy"
+  description="OmniSet privacy policy. Learn how we handle your data, cookies, and third-party services."
+  canonical="https://omniset.org/privacy/"
+>
+  <section class="py-20 bg-gradient-hero text-white">
+    <div class="container mx-auto px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Privacy Policy</h1>
+        <p class="text-white/80">Last updated: March 6, 2026</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="max-w-3xl mx-auto prose prose-lg">
+        <p class="text-lg text-gray-600 mb-8">
+          OmniSet is an open-source project committed to respecting your privacy. This policy explains what data we collect and how we use it.
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Information We Collect</h2>
+        <p class="text-gray-600 mb-4">
+          This website is a static site. We do not collect personal information, create user accounts, or store data on our servers. When you run the OmniSet install script, all operations happen locally on your machine. No data is sent back to us.
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">Cookies</h2>
+        <p class="text-gray-600 mb-4">
+          This website does not use cookies for tracking or advertising. If we use analytics in the future, we will update this policy and use privacy-respecting tools.
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">Third-Party Services</h2>
+        <p class="text-gray-600 mb-4">
+          We use the following third-party services:
+        </p>
+        <ul class="list-disc list-inside text-gray-600 space-y-2 mb-4">
+          <li><strong>GitHub</strong> &mdash; hosts our source code and accepts issue reports</li>
+          <li><strong>Google Fonts</strong> &mdash; serves the Inter typeface used on this site</li>
+        </ul>
+        <p class="text-gray-600 mb-4">
+          These services have their own privacy policies. We encourage you to review them.
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">Newsletter</h2>
+        <p class="text-gray-600 mb-4">
+          If you subscribe to our newsletter, we collect your email address solely to send you updates about OmniSet. You can unsubscribe at any time. We do not share your email with third parties.
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">Open Source</h2>
+        <p class="text-gray-600 mb-4">
+          OmniSet is fully open source. You can inspect the install script, this website, and all related code on our <a href="https://github.com/omnisetorg" class="text-orange-600 hover:text-orange-700" target="_blank" rel="noopener noreferrer">GitHub</a>. Transparency is a core value of this project.
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">Contact</h2>
+        <p class="text-gray-600 mb-4">
+          If you have any questions about this privacy policy, please <a href="https://github.com/omnisetorg/website/issues/new" class="text-orange-600 hover:text-orange-700" target="_blank" rel="noopener noreferrer">open an issue</a> on GitHub.
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-900 mb-4 mt-10">Changes to This Policy</h2>
+        <p class="text-gray-600 mb-4">
+          We may update this privacy policy from time to time. Changes will be posted on this page with an updated revision date. Since this is an open-source project, all changes are visible in our git history.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

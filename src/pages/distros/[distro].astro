@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '@layouts/BaseLayout.astro';
 import JsonLd from '@components/seo/JsonLd.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
 
 export async function getStaticPaths() {
   const distros = await getCollection('distros');
@@ -52,6 +53,11 @@ const breadcrumbSchema = {
   <section class="py-20 bg-gradient-hero text-white">
     <div class="container mx-auto px-6">
       <div class="max-w-3xl mx-auto text-center">
+        <Breadcrumb items={[
+          { label: 'Home', href: '/' },
+          { label: 'Distros', href: '/distros/' },
+          { label: distro.name }
+        ]} />
         {distro.logo ? (
           <div class="w-24 h-24 mx-auto mb-6 bg-white rounded-2xl flex items-center justify-center p-4">
             <img src={distro.logo} alt={`${distro.name} Logo`} class="w-full h-full object-contain" />
@@ -107,7 +113,7 @@ const breadcrumbSchema = {
 
         <div class="flex flex-col sm:flex-row gap-4">
           <a href={distro.downloadUrl} target="_blank" rel="noopener noreferrer"
-            class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 transition-all hover:-translate-y-0.5">
+            class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-orange-600 text-white rounded-xl hover:bg-orange-700 transition-all hover:-translate-y-0.5">
             Download {distro.name}
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
@@ -129,7 +135,7 @@ const breadcrumbSchema = {
         <p class="text-gray-600 mb-8">
           OmniSet will automatically detect your distribution and configure everything for you.
         </p>
-        <a href="/#get-started" class="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 transition-all hover:-translate-y-0.5">
+        <a href="/#get-started" class="inline-flex items-center gap-2 px-6 py-3 bg-orange-600 text-white rounded-xl hover:bg-orange-700 transition-all hover:-translate-y-0.5">
           Get started with OmniSet
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>

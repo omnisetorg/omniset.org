@@ -41,7 +41,7 @@ const categories = [
     description: "Full reference for the OmniSet CLI, modules, and configuration options",
     href: "/docs/",
     icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z",
-    color: "bg-indigo-100 text-indigo-600"
+    color: "bg-orange-100 text-orange-600"
   }
 ];
 ---
@@ -58,13 +58,13 @@ const categories = [
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
       {categories.map((cat, i) => (
         <a href={cat.href}
-           class="p-6 bg-white rounded-2xl border border-gray-200 hover:border-indigo-300 hover:shadow-lg transition-all group reveal" style={`transition-delay: ${i * 100}ms`}>
+           class="p-6 bg-white rounded-2xl border border-gray-200 hover:border-orange-300 hover:shadow-lg transition-all group reveal" style={`transition-delay: ${i * 100}ms`}>
           <div class={`w-12 h-12 ${cat.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={cat.icon}></path>
             </svg>
           </div>
-          <h3 class="text-xl font-bold text-gray-900 group-hover:text-indigo-600 transition-colors mb-2">
+          <h3 class="text-xl font-bold text-gray-900 group-hover:text-orange-600 transition-colors mb-2">
             {cat.title}
           </h3>
           <p class="text-gray-600 text-sm">{cat.description}</p>

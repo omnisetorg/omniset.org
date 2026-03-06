@@ -1,0 +1,62 @@
+{
+  "title": "Free Adobe Illustrator Alternatives for Linux",
+  "slug": "illustrator",
+  "proprietary": {
+    "name": "Adobe Illustrator",
+    "description": "The industry-leading vector graphics editor used by designers worldwide for creating logos, icons, illustrations, typography, and complex artwork for print, web, and mobile.",
+    "price": "$22.99/month"
+  },
+  "alternatives": [
+    {
+      "name": "Inkscape",
+      "description": "A professional-grade, open-source vector graphics editor that serves as the most feature-complete alternative to Adobe Illustrator on Linux. Inkscape uses SVG as its native format and supports a wide range of export options. It is well-suited for creating logos, diagrams, illustrations, and complex vector artwork.",
+      "features": [
+        "Full SVG format support as native file format",
+        "Advanced path editing and Boolean operations",
+        "Comprehensive text tools with flowing text support",
+        "Extensive filter effects and gradient meshes",
+        "Plugin and extension ecosystem for added functionality",
+        "PDF, EPS, PNG, and other export formats"
+      ],
+      "website": "https://inkscape.org",
+      "installCommand": "sudo apt install inkscape",
+      "rating": 5
+    },
+    {
+      "name": "Krita",
+      "description": "While primarily known as a digital painting application, Krita also offers robust vector drawing tools that make it a viable Illustrator alternative for illustration workflows. It excels at creating concept art, comics, and textured illustrations, blending raster and vector capabilities in one application.",
+      "features": [
+        "Combined raster and vector drawing tools",
+        "Extensive brush engine with over 100 presets",
+        "Built-in vector shapes and path editing",
+        "HDR painting and color management support",
+        "Animation timeline for motion graphics",
+        "Resource manager for brushes, patterns, and palettes"
+      ],
+      "website": "https://krita.org",
+      "installCommand": "sudo apt install krita",
+      "rating": 4
+    },
+    {
+      "name": "Karbon",
+      "description": "A lightweight vector drawing application that is part of the Calligra Suite. Karbon provides essential vector editing tools in a clean, accessible interface. It is suitable for users who need straightforward vector graphics creation without the complexity of a full-featured design suite.",
+      "features": [
+        "Clean and intuitive vector editing interface",
+        "Support for SVG, ODG, WMF, and EPS formats",
+        "Layer management and object grouping",
+        "Path operations including union, intersection, and subtraction",
+        "Gradient and pattern fill support",
+        "Integration with the Calligra Suite"
+      ],
+      "website": "https://calligra.org/karbon/",
+      "installCommand": "sudo apt install karbon",
+      "rating": 3
+    }
+  ],
+  "verdict": "Inkscape is the clear standout as a free Illustrator alternative for Linux, offering professional-grade vector editing with comprehensive SVG support. Krita is an excellent choice for illustrators who blend raster and vector workflows, particularly for concept art and comics. Karbon is a solid lightweight option for users who need basic vector editing without the overhead of a larger application.",
+  "seo": {
+    "title": "Free Adobe Illustrator Alternatives for Linux in 2026 | Vector Graphics Editors",
+    "description": "Find the best free and open-source Adobe Illustrator alternatives for Linux. Compare Inkscape, Krita, and Karbon for professional vector graphics editing.",
+    "keywords": ["illustrator alternatives linux", "open source vector editor", "inkscape", "krita vector", "karbon", "free vector graphics", "svg editor linux"]
+  }
+}

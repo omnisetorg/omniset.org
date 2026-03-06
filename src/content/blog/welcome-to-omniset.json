@@ -1,0 +1,14 @@
+{
+  "title": "Welcome to OmniSet",
+  "slug": "welcome-to-omniset",
+  "date": "2026-03-01",
+  "author": "OmniSet Team",
+  "description": "Introducing OmniSet — your complete Linux setup tool. Learn what we're building and why.",
+  "content": "## Why We Built OmniSet\n\nSetting up a new Linux installation has always been a chore. You install your distro, then spend hours installing packages, configuring dotfiles, setting up development tools, and tweaking your desktop environment. Every time you switch machines or reinstall, you repeat the same tedious process.\n\nOmniSet was born from this frustration. We wanted a single command that transforms a fresh Linux install into a fully configured workstation — tailored to your needs.\n\n## How It Works\n\nOmniSet uses a profile-based approach. Whether you're a developer, designer, gamer, or system administrator, there's a profile that installs and configures exactly the tools you need. Run one command, pick your profile, and let OmniSet handle the rest.\n\n```bash\nwget -qO- https://omniset.org/install | bash\n```\n\nThe script detects your distribution automatically and uses the appropriate package manager. It works on Ubuntu, Fedora, Arch, and many other popular distros.\n\n## What's Next\n\nWe're working on expanding our tool library, adding more profiles, and improving distro support. OmniSet is fully open source, and we welcome contributions from the community.\n\nFollow along on [GitHub](https://github.com/omnisetorg) and check out the [documentation](/docs/) to learn more.",
+  "tags": ["announcement", "open-source", "linux"],
+  "seo": {
+    "title": "Welcome to OmniSet — Your Complete Linux Setup Tool",
+    "description": "Introducing OmniSet, the open-source tool that sets up your Linux environment with a single command. Learn about our mission and how it works.",
+    "keywords": ["omniset", "linux setup", "linux automation", "open source"]
+  }
+}

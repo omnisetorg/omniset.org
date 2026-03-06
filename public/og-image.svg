@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff8c00"/>
+      <stop offset="100%" stop-color="#e04520"/>
+    </linearGradient>
+    <linearGradient id="logo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#ffffffcc"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Infinity ribbon logo centered -->
+  <g transform="translate(480, 160) scale(2)">
+    <path d="
+      M20 60
+      C20 32, 45 32, 60 50
+      C75 68, 100 68, 100 40
+      C100 12, 75 12, 60 40
+      C45 68, 20 88, 20 60
+      Z
+    " fill="url(#logo)"/>
+  </g>
+  <!-- OmniSet text -->
+  <text x="600" y="440" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="72" font-weight="700" fill="white">OmniSet</text>
+  <!-- Tagline -->
+  <text x="600" y="500" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="28" fill="rgba(255,255,255,0.8)">Your complete Linux setup, one command away</text>
+</svg>

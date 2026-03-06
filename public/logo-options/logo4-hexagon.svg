@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="g4a" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <linearGradient id="g4b" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#764ba2" stop-opacity="0.8"/>
+    </linearGradient>
+  </defs>
+  <!-- Abstract crystal / diamond shape made of triangular facets -->
+  <!-- Main large triangle -->
+  <polygon points="60,10 105,85 15,85" fill="url(#g4a)"/>
+  <!-- Lighter inner facets for depth -->
+  <polygon points="60,10 82,55 60,85" fill="white" opacity="0.12"/>
+  <polygon points="60,85 82,55 105,85" fill="black" opacity="0.1"/>
+  <!-- Inverted small triangle cutout for style -->
+  <polygon points="60,45 75,72 45,72" fill="url(#g4b)"/>
+</svg>

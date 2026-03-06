@@ -1,0 +1,54 @@
+{
+  "title": "How to Customize Your Linux Desktop",
+  "slug": "customize-linux-desktop",
+  "description": "Make your Linux desktop truly yours — themes, icons, fonts, dock, and wallpapers on GNOME and KDE.",
+  "difficulty": "beginner",
+  "timeToComplete": "20 minutes",
+  "prerequisites": [
+    "Ubuntu, Fedora, or any distro with GNOME or KDE desktop",
+    "Internet connection for downloading themes"
+  ],
+  "steps": [
+    {
+      "title": "Install GNOME Tweaks (GNOME Users)",
+      "content": "GNOME Tweaks gives you access to settings that are hidden by default — fonts, themes, titlebar buttons, startup apps, and more.",
+      "code": "sudo apt install gnome-tweaks gnome-shell-extensions",
+      "language": "bash"
+    },
+    {
+      "title": "Change Your GTK and Icon Theme",
+      "content": "Download themes from [gnome-look.org](https://gnome-look.org). Extract them to `~/.themes` for GTK themes and `~/.icons` for icon packs, then apply them in GNOME Tweaks.",
+      "code": "mkdir -p ~/.themes ~/.icons\n# Extract your downloaded theme:\ntar -xf WhiteSur-Dark.tar.xz -C ~/.themes/\ntar -xf Tela-circle-icon.tar.xz -C ~/.icons/",
+      "language": "bash"
+    },
+    {
+      "title": "Set Up a Dock",
+      "content": "If you want a macOS-style dock, **Dash to Dock** is the most popular extension. Install it from the GNOME Extensions website or via your package manager.",
+      "code": "sudo apt install gnome-shell-extension-dash-to-dock",
+      "language": "bash"
+    },
+    {
+      "title": "Change Fonts",
+      "content": "Download fonts like **Inter**, **JetBrains Mono**, or **Fira Code**. Place them in `~/.local/share/fonts/` and set them in GNOME Tweaks under Fonts.",
+      "code": "mkdir -p ~/.local/share/fonts\ncp *.ttf ~/.local/share/fonts/\nfc-cache -fv",
+      "language": "bash"
+    },
+    {
+      "title": "Configure Wallpaper and Lock Screen",
+      "content": "Set your wallpaper from Settings > Background. For dynamic wallpapers or slideshows, you can use tools like **Hydrapaper** (multi-monitor) or **Variety** (auto-changing).",
+      "code": "sudo apt install variety",
+      "language": "bash"
+    },
+    {
+      "title": "KDE Users: System Settings",
+      "content": "KDE Plasma has built-in customization that rivals anything else. Open **System Settings** and explore:\n\n- **Global Theme** — full look-and-feel presets\n- **Plasma Style** — panel and widget appearance\n- **Colors** — fine-tune every accent color\n- **Icons** — swap icon packs\n- **Window Decorations** — titlebar buttons and borders\n\nYou can download new themes directly from the settings with the **Get New...** buttons.",
+      "language": "bash"
+    }
+  ],
+  "relatedGuides": ["linux-terminal-basics", "gaming-linux-setup"],
+  "seo": {
+    "title": "How to Customize Your Linux Desktop | OmniSet Guide",
+    "description": "Complete guide to customizing your Linux desktop. Themes, icons, fonts, docks, and wallpapers for GNOME and KDE.",
+    "keywords": ["customize linux", "linux themes", "gnome customization", "kde themes", "linux desktop"]
+  }
+}

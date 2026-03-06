@@ -1,0 +1,19 @@
+{
+  "term": "GUI",
+  "slug": "gui",
+  "shortDefinition": "Graphical User Interface - a visual way to interact with a computer using windows, icons, menus, and a mouse pointer.",
+  "longDefinition": "A GUI (Graphical User Interface) is a type of user interface that allows people to interact with a computer through visual elements such as windows, icons, buttons, menus, and a mouse pointer, rather than typing text commands. On Linux, the graphical environment is built on a display server protocol, historically X11 (X Window System) and increasingly Wayland. Desktop environments like GNOME, KDE Plasma, XFCE, and Cinnamon provide complete GUI experiences including file managers, settings panels, application launchers, and window management. The GUI layer on Linux is entirely separate from the underlying operating system, meaning users can choose different desktop environments, switch between them, or opt to run a system without a GUI at all (common on servers). This separation and flexibility is a distinctive feature of Linux compared to Windows and macOS.",
+  "category": "Desktop & Interface",
+  "relatedTerms": ["cli", "terminal", "distro", "bash"],
+  "examples": [
+    "startx - Start the X Window System GUI from a text console",
+    "sudo apt install gnome-shell - Install the GNOME desktop environment",
+    "sudo systemctl set-default graphical.target - Set the system to boot into GUI mode by default",
+    "xrandr --output HDMI-1 --mode 1920x1080 - Configure display resolution via the command line for the X11 GUI"
+  ],
+  "seo": {
+    "title": "What is a GUI in Linux? | Graphical User Interface Explained",
+    "description": "Learn what a GUI is, how graphical desktop environments work on Linux, and the difference between GUI and command-line interfaces.",
+    "keywords": ["gui linux", "what is gui", "graphical user interface", "linux desktop environment", "gui vs cli"]
+  }
+}

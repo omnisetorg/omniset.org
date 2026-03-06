@@ -53,14 +53,14 @@ const iconPaths: Record<string, string> = {
             <div class="grid md:grid-cols-2 gap-4">
               {categories[category].map((doc) => (
                 <a href={`/docs/${doc.slug}/`}
-                   class="flex gap-4 p-4 rounded-xl border border-gray-200 hover:border-indigo-300 hover:bg-indigo-50/50 transition-all group">
-                  <div class="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-indigo-200 transition-colors">
-                    <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                   class="flex gap-4 p-4 rounded-xl border border-gray-200 hover:border-orange-300 hover:bg-orange-50/50 transition-all group">
+                  <div class="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-orange-200 transition-colors">
+                    <svg class="w-5 h-5 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={iconPaths[doc.icon || 'help']}></path>
                     </svg>
                   </div>
                   <div>
-                    <h3 class="font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors">
+                    <h3 class="font-semibold text-gray-900 group-hover:text-orange-600 transition-colors">
                       {doc.title}
                     </h3>
                     <p class="text-sm text-gray-600 mt-1">
@@ -84,7 +84,7 @@ const iconPaths: Record<string, string> = {
           Check out our FAQ or ask the community for help.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="/faq/" class="px-6 py-3 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 transition-all hover:-translate-y-0.5">
+          <a href="/faq/" class="px-6 py-3 bg-orange-600 text-white rounded-xl hover:bg-orange-700 transition-all hover:-translate-y-0.5">
             View FAQ
           </a>
           <a href="https://github.com/omnisetorg/install/discussions" target="_blank"

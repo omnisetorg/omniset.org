@@ -1,0 +1,57 @@
+{
+  "title": "Firefox vs Chrome on Linux",
+  "slug": "firefox-vs-chrome-linux",
+  "itemA": {
+    "name": "Firefox",
+    "pros": [
+      "Strong privacy protections with Enhanced Tracking Protection",
+      "Fully open source and developed by a nonprofit (Mozilla)",
+      "Lower memory usage with many tabs open",
+      "Native Wayland support out of the box",
+      "Included by default in most Linux distributions",
+      "Highly customizable with about:config and userChrome.css",
+      "No ties to a data-harvesting business model"
+    ],
+    "cons": [
+      "Some websites are optimized for Chrome and may render differently",
+      "Extension library is smaller than Chrome's",
+      "Snap-packaged version on Ubuntu has slower startup",
+      "Slightly less performant on JavaScript-heavy benchmarks"
+    ],
+    "bestFor": "Privacy-conscious Linux users, open-source advocates, and anyone who wants a browser that respects user freedom"
+  },
+  "itemB": {
+    "name": "Chrome",
+    "pros": [
+      "Fastest JavaScript and rendering performance",
+      "Largest extension ecosystem (Chrome Web Store)",
+      "Seamless integration with Google services",
+      "Best compatibility with web apps and sites",
+      "Built-in PDF viewer and translation tools",
+      "Frequent updates with the latest web standards"
+    ],
+    "cons": [
+      "Significant privacy concerns with Google telemetry",
+      "High memory usage, especially with many tabs",
+      "Not open source (Chromium is, but Chrome is not)",
+      "No native repo package - requires manual install or third-party repo",
+      "Manifest V3 limits ad-blocker effectiveness"
+    ],
+    "bestFor": "Users deeply embedded in the Google ecosystem who prioritize maximum web compatibility and raw performance"
+  },
+  "verdict": "Firefox is the natural choice for Linux users who value privacy, open source, and tight integration with their distribution. Chrome offers better raw performance and web compatibility but comes with significant privacy trade-offs. For a middle ground, Chromium or Ungoogled Chromium provide Chrome's engine without Google's tracking. Most Linux power users lean toward Firefox for daily browsing.",
+  "comparisonTable": [
+    {"feature": "Privacy", "itemA": "Excellent (tracking protection)", "itemB": "Poor (Google telemetry)"},
+    {"feature": "Open Source", "itemA": "Yes (MPL 2.0)", "itemB": "No (Chromium is, Chrome is not)"},
+    {"feature": "Memory Usage", "itemA": "Moderate", "itemB": "High"},
+    {"feature": "Extension Support", "itemA": "Good", "itemB": "Excellent"},
+    {"feature": "Wayland Support", "itemA": "Native", "itemB": "Flag required"},
+    {"feature": "Default in Distros", "itemA": "Most distros", "itemB": "Rarely included"},
+    {"feature": "Ad Blocker Support", "itemA": "Full (Manifest V2)", "itemB": "Limited (Manifest V3)"}
+  ],
+  "seo": {
+    "title": "Firefox vs Chrome on Linux: Privacy, Performance & Compatibility | OmniSet",
+    "description": "Should you use Firefox or Chrome on Linux? Compare privacy, performance, extension support, and native Linux integration to find the best browser for your setup.",
+    "keywords": ["firefox vs chrome linux", "best browser for linux", "chrome on linux", "firefox linux", "linux browser comparison", "privacy browser linux"]
+  }
+}

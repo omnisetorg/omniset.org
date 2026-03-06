@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+  </defs>
+  <!-- Flowing infinity / "omni" ribbon -->
+  <path d="
+    M30 60
+    C30 38, 50 38, 60 52
+    C70 66, 90 66, 90 44
+    C90 22, 70 22, 60 44
+    C50 66, 30 82, 30 60
+    Z
+  " fill="url(#g2)"/>
+</svg>

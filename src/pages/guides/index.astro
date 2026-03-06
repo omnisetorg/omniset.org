@@ -31,18 +31,18 @@ const difficultyColors: Record<string, string> = {
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
         {guides.map((guide) => (
           <a href={`/guides/${guide.data.slug}/`}
-             class="p-6 rounded-2xl border border-gray-200 hover:border-indigo-300 hover:shadow-lg transition-all group">
+             class="p-6 rounded-2xl border border-gray-200 hover:border-orange-300 hover:shadow-lg transition-all group">
             <div class="flex items-center gap-3 mb-4">
               <span class={`text-xs px-2 py-1 rounded-full font-medium ${difficultyColors[guide.data.difficulty]}`}>
                 {guide.data.difficulty}
               </span>
               <span class="text-xs text-gray-500">{guide.data.timeToComplete}</span>
             </div>
-            <h2 class="text-xl font-bold text-gray-900 group-hover:text-indigo-600 transition-colors mb-2">
+            <h2 class="text-xl font-bold text-gray-900 group-hover:text-orange-600 transition-colors mb-2">
               {guide.data.title}
             </h2>
             <p class="text-gray-600 text-sm">{guide.data.description}</p>
-            <div class="mt-4 text-sm text-indigo-600">
+            <div class="mt-4 text-sm text-orange-600">
               {guide.data.steps.length} steps →
             </div>
           </a>

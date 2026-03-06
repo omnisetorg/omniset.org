@@ -1,0 +1,58 @@
+{
+  "title": "GNOME vs KDE",
+  "slug": "gnome-vs-kde",
+  "itemA": {
+    "name": "GNOME",
+    "pros": [
+      "Clean, distraction-free interface focused on workflow",
+      "Consistent design language across all apps",
+      "Excellent Wayland support and touch/gesture integration",
+      "Simple and approachable for new Linux users",
+      "Strong accessibility features out of the box",
+      "Activities overview provides efficient app and workspace switching",
+      "Default desktop for Fedora, Ubuntu, and many major distros"
+    ],
+    "cons": [
+      "Limited customization without extensions",
+      "Extensions can break after GNOME updates",
+      "Higher RAM usage than lightweight alternatives",
+      "Opinionated design - fewer built-in settings to tweak",
+      "No desktop icons by default"
+    ],
+    "bestFor": "Users who prefer a clean, opinionated workflow, touchscreen/laptop users, and those who value simplicity over endless options"
+  },
+  "itemB": {
+    "name": "KDE Plasma",
+    "pros": [
+      "Extremely customizable - tweak nearly every visual detail",
+      "Familiar Windows-like layout by default",
+      "Lower RAM usage than GNOME in recent versions",
+      "Feature-rich built-in tools (KDE Connect, Dolphin, Konsole)",
+      "KDE Connect provides seamless phone integration",
+      "Widgets and panels can be arranged in any configuration",
+      "Excellent Wayland support with ongoing rapid improvements"
+    ],
+    "cons": [
+      "Abundance of options can overwhelm new users",
+      "Visual consistency varies across KDE and third-party apps",
+      "Default theme may look busy compared to GNOME",
+      "Some GTK apps look out of place without theming adjustments"
+    ],
+    "bestFor": "Power users, tinkerers, and Windows switchers who want deep customization and a traditional desktop layout"
+  },
+  "verdict": "GNOME and KDE Plasma are both excellent, mature desktop environments. GNOME excels at providing a focused, streamlined workflow where the desktop stays out of your way. KDE Plasma is the better choice for users who want to customize every aspect of their experience and prefer a traditional taskbar-and-menu layout. Try both via a live USB before committing - desktop preference is deeply personal.",
+  "comparisonTable": [
+    {"feature": "Default Layout", "itemA": "Activities-based (macOS-like)", "itemB": "Taskbar-based (Windows-like)"},
+    {"feature": "Customization", "itemA": "Moderate (via extensions)", "itemB": "Extensive (built-in)"},
+    {"feature": "RAM Usage (Idle)", "itemA": "~1.1 GB", "itemB": "~800 MB"},
+    {"feature": "Toolkit", "itemA": "GTK / libadwaita", "itemB": "Qt"},
+    {"feature": "Phone Integration", "itemA": "GSConnect (extension)", "itemB": "KDE Connect (native)"},
+    {"feature": "Wayland Support", "itemA": "Mature", "itemB": "Mature (rapid progress)"},
+    {"feature": "Learning Curve", "itemA": "Low", "itemB": "Low-Medium"}
+  ],
+  "seo": {
+    "title": "GNOME vs KDE Plasma: Which Linux Desktop Environment Is Better? | OmniSet",
+    "description": "Compare GNOME and KDE Plasma desktop environments. We cover customization, performance, workflow, and features to help you choose the right Linux desktop.",
+    "keywords": ["gnome vs kde", "kde vs gnome", "best linux desktop environment", "gnome or kde", "linux desktop comparison", "kde plasma vs gnome"]
+  }
+}

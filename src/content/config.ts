@@ -190,6 +190,20 @@ const glossaryCollection = defineCollection({
   })
 });
 
+const blogCollection = defineCollection({
+  type: 'data',
+  schema: z.object({
+    title: z.string(),
+    slug: z.string(),
+    date: z.string(),
+    author: z.string(),
+    description: z.string(),
+    content: z.string(),
+    tags: z.array(z.string()),
+    seo: seoSchema
+  })
+});
+
 export const collections = {
   profiles: profilesCollection,
   distros: distrosCollection,
@@ -199,5 +213,6 @@ export const collections = {
   comparisons: comparisonsCollection,
   guides: guidesCollection,
   alternatives: alternativesCollection,
-  glossary: glossaryCollection
+  glossary: glossaryCollection,
+  blog: blogCollection
 };

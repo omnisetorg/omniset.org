@@ -1,0 +1,19 @@
+{
+  "term": "Bash",
+  "slug": "bash",
+  "shortDefinition": "Bourne Again Shell - the most widely used command-line shell and scripting language on Linux systems.",
+  "longDefinition": "Bash (Bourne Again Shell) is a Unix shell and command language created as a free replacement for the Bourne Shell (sh). It is the default login shell on most Linux distributions and macOS (prior to Catalina). Bash provides an interactive command-line interface for users to interact with the operating system, and also serves as a powerful scripting language for automating tasks. It supports variables, control structures, functions, arrays, and extensive string manipulation. Bash scripts are commonly used for system administration, task automation, and software deployment across virtually all Linux environments.",
+  "category": "Shell & Command Line",
+  "relatedTerms": ["terminal", "cli", "grep", "chmod", "cron", "sudo"],
+  "examples": [
+    "#!/bin/bash - Shebang line that specifies Bash as the script interpreter",
+    "echo $SHELL - Display which shell you are currently using",
+    "bash script.sh - Execute a Bash script file",
+    "for i in {1..5}; do echo $i; done - A simple Bash for-loop that prints numbers 1 through 5"
+  ],
+  "seo": {
+    "title": "What is Bash? | Linux Shell & Scripting Language Explained",
+    "description": "Learn what Bash is, how it works as the default Linux shell, and why it is essential for command-line interaction and scripting on Linux systems.",
+    "keywords": ["bash shell", "what is bash", "bash linux", "bourne again shell", "bash scripting", "linux shell"]
+  }
+}

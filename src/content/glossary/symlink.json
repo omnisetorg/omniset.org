@@ -1,0 +1,19 @@
+{
+  "term": "Symlink",
+  "slug": "symlink",
+  "shortDefinition": "A symbolic link that acts as a shortcut or reference pointing to another file or directory in the filesystem.",
+  "longDefinition": "A symlink (symbolic link), also known as a soft link, is a special type of file in Linux that serves as a pointer or reference to another file or directory. Unlike a hard link, which points directly to the data on disk (inode), a symbolic link contains the path to the target file or directory. Symlinks are widely used in Linux for creating shortcuts, maintaining compatibility when files are moved, managing multiple versions of software, and simplifying complex directory structures. If the target file is deleted, the symlink becomes a 'dangling' or broken link. Symlinks can span across different filesystems and partitions, unlike hard links. They are visible in directory listings with an arrow (->) indicating what they point to. System directories like /usr/bin frequently contain symlinks to manage alternative program versions.",
+  "category": "Filesystem",
+  "relatedTerms": ["chmod", "mount", "partition", "bash", "terminal"],
+  "examples": [
+    "ln -s /home/user/documents/report.txt ~/Desktop/report-link - Create a symlink on the desktop pointing to a file",
+    "ls -l /usr/bin/python3 - View where the python3 symlink points to",
+    "ln -sf /opt/app/v2 /opt/app/current - Create or update a symlink to point to a new application version",
+    "find / -type l -xtype l 2>/dev/null - Find all broken symbolic links on the system"
+  ],
+  "seo": {
+    "title": "What is a Symlink? | Linux Symbolic Links Explained",
+    "description": "Learn what a symlink is in Linux, how symbolic links work, and how to create and manage soft links to files and directories.",
+    "keywords": ["symlink", "what is symlink", "symbolic link linux", "soft link", "ln -s", "linux symlink"]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "term": "SSH",
+  "slug": "ssh",
+  "shortDefinition": "Secure Shell - a cryptographic network protocol for secure remote access and command execution over unsecured networks.",
+  "longDefinition": "SSH (Secure Shell) is a cryptographic network protocol that provides a secure channel for remote login, command execution, and data transfer between computers over an unsecured network. It replaces older, insecure protocols such as Telnet and rlogin by encrypting all traffic between the client and server. SSH uses public-key cryptography for authentication and supports password-based, key-based, and multi-factor authentication methods. Beyond remote shell access, SSH enables secure file transfers via SCP and SFTP, port forwarding, and tunneling. OpenSSH is the most widely used implementation and comes pre-installed on nearly all Linux distributions. SSH typically operates on port 22 and is a fundamental tool for system administrators managing remote servers.",
+  "category": "Networking & Security",
+  "relatedTerms": ["terminal", "bash", "cli", "firewall", "daemon", "root"],
+  "examples": [
+    "ssh user@192.168.1.100 - Connect to a remote machine via SSH",
+    "ssh-keygen -t ed25519 - Generate a new SSH key pair for key-based authentication",
+    "scp file.txt user@server:/home/user/ - Securely copy a file to a remote server",
+    "ssh -L 8080:localhost:80 user@server - Create an SSH tunnel forwarding local port 8080 to the remote server's port 80"
+  ],
+  "seo": {
+    "title": "What is SSH? | Secure Shell Protocol Explained",
+    "description": "Learn what SSH is, how Secure Shell works for remote access, and why it is essential for managing Linux servers securely.",
+    "keywords": ["ssh", "what is ssh", "secure shell", "ssh linux", "ssh key", "remote access linux"]
+  }
+}

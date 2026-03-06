@@ -1,0 +1,19 @@
+{
+  "term": "Repository",
+  "slug": "repository",
+  "shortDefinition": "A centralized storage location from which Linux package managers retrieve and install software packages.",
+  "longDefinition": "A repository (often shortened to 'repo') in the Linux context is a storage location, typically hosted on a remote server, that contains software packages and metadata used by package managers to install, update, and manage software. Linux distributions maintain official repositories that are curated and tested for compatibility and security. Users can also add third-party repositories, such as PPAs (Personal Package Archives) on Ubuntu, to access additional software not included in the official sources. Repositories are organized by release version and often divided into categories such as main, universe, restricted, and multiverse (Ubuntu) or stable, testing, and unstable (Debian). The repository system is a key advantage of Linux, providing a centralized, secure, and convenient way to manage software without needing to download installers from the web.",
+  "category": "Package Management",
+  "relatedTerms": ["apt", "package-manager", "distro", "sudo"],
+  "examples": [
+    "sudo add-apt-repository ppa:example/ppa - Add a third-party PPA repository on Ubuntu",
+    "sudo apt update - Refresh the local cache of available packages from all configured repositories",
+    "cat /etc/apt/sources.list - View the list of configured APT repositories",
+    "dnf repolist - List all enabled repositories on Fedora or RHEL-based systems"
+  ],
+  "seo": {
+    "title": "What is a Repository in Linux? | Software Repos Explained",
+    "description": "Learn what a Linux software repository is, how package managers use repos to install software, and how to add or manage repositories.",
+    "keywords": ["linux repository", "what is a repo", "software repository", "apt repository", "ppa", "linux package repo"]
+  }
+}

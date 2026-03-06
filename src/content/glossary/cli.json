@@ -1,0 +1,19 @@
+{
+  "term": "CLI",
+  "slug": "cli",
+  "shortDefinition": "Command Line Interface - a text-based interface for interacting with the operating system by typing commands.",
+  "longDefinition": "A CLI (Command Line Interface) is a text-based method of interacting with a computer's operating system or software by typing commands into a terminal or console. Unlike a graphical user interface (GUI), the CLI relies entirely on text input and output. On Linux, the CLI is accessed through a terminal emulator (in a GUI environment) or directly via a virtual console. Users type commands that are interpreted by a shell such as Bash, Zsh, or Fish. The CLI is favored by system administrators, developers, and power users because it offers greater control, faster execution of repetitive tasks through scripting, the ability to chain commands together with pipes and redirects, and lower resource consumption compared to graphical interfaces. Most Linux server environments run exclusively through the CLI without any GUI installed.",
+  "category": "Shell & Command Line",
+  "relatedTerms": ["terminal", "bash", "gui", "grep", "sudo", "ssh"],
+  "examples": [
+    "ls -la /home/user/ - List all files in a directory with detailed information via the CLI",
+    "cat /etc/os-release - Display operating system information from the command line",
+    "history | tail -20 - Show the last 20 commands you typed in the CLI",
+    "man ls - Open the manual page for the ls command to learn its options"
+  ],
+  "seo": {
+    "title": "What is a CLI? | Command Line Interface in Linux Explained",
+    "description": "Learn what a CLI is, how the command line works in Linux, and why it is preferred over a GUI for system administration and development.",
+    "keywords": ["cli", "what is cli", "command line interface", "linux command line", "cli vs gui", "terminal vs cli"]
+  }
+}

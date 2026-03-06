@@ -1,0 +1,60 @@
+{
+  "title": "Linux Terminal Basics for Beginners",
+  "slug": "linux-terminal-basics",
+  "description": "Learn the essential Linux terminal commands every beginner should know — navigation, files, permissions, and more.",
+  "difficulty": "beginner",
+  "timeToComplete": "15 minutes",
+  "prerequisites": [
+    "Any Linux distribution installed",
+    "Access to a terminal emulator"
+  ],
+  "steps": [
+    {
+      "title": "Open Your Terminal",
+      "content": "On most Linux desktops, press **Ctrl+Alt+T** to open a terminal. You'll see a prompt like `user@hostname:~$` — this is where you type commands.",
+      "language": "bash"
+    },
+    {
+      "title": "Navigate the File System",
+      "content": "Use `pwd` to see where you are, `ls` to list files, and `cd` to change directories. The tilde `~` is a shortcut for your home directory.",
+      "code": "pwd\nls -la\ncd Documents\ncd ~",
+      "language": "bash"
+    },
+    {
+      "title": "Create and Remove Files & Folders",
+      "content": "Use `mkdir` to create directories, `touch` to create empty files, and `rm` to remove them.",
+      "code": "mkdir my-project\ntouch my-project/notes.txt\nrm my-project/notes.txt\nrmdir my-project",
+      "language": "bash",
+      "warning": "Be very careful with rm -rf — it deletes files permanently without confirmation."
+    },
+    {
+      "title": "Read and Edit Files",
+      "content": "Use `cat` to print file contents, `less` to scroll through large files, and `nano` for simple editing.",
+      "code": "cat /etc/hostname\nless /var/log/syslog\nnano ~/notes.txt",
+      "language": "bash"
+    },
+    {
+      "title": "Understand Permissions",
+      "content": "Every file has an owner, a group, and permissions. Use `ls -l` to see them and `chmod` to change them. The format is **rwx** (read, write, execute) for owner, group, and others.",
+      "code": "ls -l myfile.txt\nchmod 755 myscript.sh\nchmod +x myscript.sh",
+      "language": "bash"
+    },
+    {
+      "title": "Install Software with Your Package Manager",
+      "content": "On Debian/Ubuntu, use `apt`. On Fedora, use `dnf`. On Arch, use `pacman`. Always update your package list first.",
+      "code": "sudo apt update\nsudo apt install htop\nsudo apt remove htop",
+      "language": "bash"
+    },
+    {
+      "title": "Useful Shortcuts and Tips",
+      "content": "A few things that will save you a lot of time:\n\n- **Tab** — auto-complete file names and commands\n- **Ctrl+C** — cancel the current command\n- **Ctrl+R** — search command history\n- **Up/Down arrows** — scroll through previous commands\n- **man <command>** — read the manual for any command",
+      "language": "bash"
+    }
+  ],
+  "relatedGuides": ["install-docker-ubuntu", "setup-nodejs-linux"],
+  "seo": {
+    "title": "Linux Terminal Basics for Beginners | OmniSet Guide",
+    "description": "Learn essential Linux terminal commands. A beginner-friendly guide covering navigation, files, permissions, and package management.",
+    "keywords": ["linux terminal basics", "linux commands", "terminal tutorial", "linux beginner", "command line"]
+  }
+}

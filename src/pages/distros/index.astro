@@ -25,7 +25,7 @@ const distros = await getCollection('distros');
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
         {distros.map((distro) => (
           <a href={`/distros/${distro.data.slug}/`}
-             class="p-6 rounded-2xl border border-gray-200 hover:border-indigo-300 hover:shadow-lg transition-all group text-center">
+             class="p-6 rounded-2xl border border-gray-200 hover:border-orange-300 hover:shadow-lg transition-all group text-center">
             <div class="w-16 h-16 mx-auto mb-4 bg-gray-50 rounded-2xl flex items-center justify-center p-3">
               {distro.data.logo ? (
                 <img src={distro.data.logo} alt={`${distro.data.name} logo`} class="w-full h-full object-contain" />
@@ -35,7 +35,7 @@ const distros = await getCollection('distros');
                 </svg>
               )}
             </div>
-            <h2 class="text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">{distro.data.name}</h2>
+            <h2 class="text-lg font-bold text-gray-900 group-hover:text-orange-600 transition-colors">{distro.data.name}</h2>
             <p class="text-sm text-gray-500 mt-1">{distro.data.tagline}</p>
           </a>
         ))}
@@ -50,7 +50,7 @@ const distros = await getCollection('distros');
         <p class="text-gray-600 mb-8">
           If you're new to Linux, we recommend starting with Ubuntu. It has the best hardware support and largest community.
         </p>
-        <a href="/distros/ubuntu/" class="px-6 py-3 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 transition-all">
+        <a href="/distros/ubuntu/" class="px-6 py-3 bg-orange-600 text-white rounded-xl hover:bg-orange-700 transition-all">
           Learn about Ubuntu
         </a>
       </div>

@@ -1,6 +1,8 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '@layouts/BaseLayout.astro';
+import JsonLd from '@components/seo/JsonLd.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
 
 export async function getStaticPaths() {
   const alternatives = await getCollection('alternatives');
@@ -15,6 +17,16 @@ const { alternative } = Astro.props;
 function getStars(rating: number): string {
   return '★'.repeat(rating) + '☆'.repeat(5 - rating);
 }
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://omniset.org" },
+    { "@type": "ListItem", "position": 2, "name": "Alternatives", "item": "https://omniset.org/alternatives/" },
+    { "@type": "ListItem", "position": 3, "name": alternative.title, "item": `https://omniset.org/alternatives/${alternative.slug}/` }
+  ]
+};
 ---
 
 <BaseLayout
@@ -22,9 +34,18 @@ function getStars(rating: number): string {
   description={alternative.seo.description}
   canonical={`https://omniset.org/alternatives/${alternative.slug}/`}
 >
+  <Fragment slot="head">
+    <JsonLd schema={breadcrumbSchema} />
+  </Fragment>
+
   <section class="py-20 bg-gradient-hero text-white">
     <div class="container mx-auto px-6">
       <div class="max-w-3xl mx-auto text-center">
+        <Breadcrumb items={[
+          { label: 'Home', href: '/' },
+          { label: 'Alternatives', href: '/alternatives/' },
+          { label: alternative.proprietary.name }
+        ]} />
         <h1 class="text-4xl md:text-5xl font-bold mb-6">
           Best {alternative.proprietary.name} Alternatives for Linux
         </h1>
@@ -43,7 +64,7 @@ function getStars(rating: number): string {
               <div class="flex items-start justify-between mb-4">
                 <div class="flex-1">
                   <div class="flex items-center gap-3 flex-wrap">
-                    <span class="text-sm font-bold text-indigo-600">#{index + 1}</span>
+                    <span class="text-sm font-bold text-orange-600">#{index + 1}</span>
                     <h2 class="text-2xl font-bold text-gray-900">{alt.name}</h2>
                     <span class="text-yellow-500 text-sm">{getStars(alt.rating)}</span>
                   </div>
@@ -76,7 +97,7 @@ function getStars(rating: number): string {
 
               <div class="mt-6 pt-4 border-t border-gray-100">
                 <a href={alt.website} target="_blank" rel="noopener noreferrer"
-                   class="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-700 font-medium">
+                   class="inline-flex items-center gap-2 text-orange-600 hover:text-orange-700 font-medium">
                   Visit Website
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
@@ -88,7 +109,7 @@ function getStars(rating: number): string {
         </div>
 
         <!-- Verdict -->
-        <div class="mt-12 p-6 bg-indigo-50 rounded-2xl">
+        <div class="mt-12 p-6 bg-orange-50 rounded-2xl">
           <h2 class="text-xl font-bold text-gray-900 mb-4">Our Verdict</h2>
           <p class="text-gray-700">{alternative.verdict}</p>
         </div>

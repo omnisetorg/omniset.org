@@ -1,0 +1,60 @@
+{
+  "title": "How to Dual Boot Windows and Linux",
+  "slug": "dual-boot-windows-linux",
+  "description": "Install Linux alongside Windows without losing your data. Step-by-step dual boot setup with GRUB.",
+  "difficulty": "intermediate",
+  "timeToComplete": "30 minutes",
+  "prerequisites": [
+    "A PC with Windows 10 or 11 installed",
+    "A USB drive (8GB or larger)",
+    "At least 50GB of free disk space",
+    "A backup of important files"
+  ],
+  "steps": [
+    {
+      "title": "Back Up Your Data",
+      "content": "Before touching partitions, back up anything important. Use an external drive, cloud storage, or both. Partitioning is generally safe but mistakes can happen.",
+      "warning": "Partitioning carries a small risk of data loss. Always back up first."
+    },
+    {
+      "title": "Shrink Your Windows Partition",
+      "content": "Open **Disk Management** in Windows (right-click Start > Disk Management). Right-click your main partition (usually C:) and select **Shrink Volume**. Free up at least 50GB for Linux.",
+      "language": "bash"
+    },
+    {
+      "title": "Download a Linux ISO and Create a Bootable USB",
+      "content": "Download your preferred distro (Ubuntu, Mint, Fedora, etc.) and flash it to a USB drive using **balenaEtcher** or **Rufus** on Windows.",
+      "code": "# On Linux, you can also use dd:\nsudo dd if=ubuntu-24.04.iso of=/dev/sdX bs=4M status=progress\nsync",
+      "language": "bash",
+      "warning": "Make sure you select the correct USB drive with dd — writing to the wrong device will erase it."
+    },
+    {
+      "title": "Boot from USB",
+      "content": "Restart your PC and enter the boot menu (usually **F12**, **F2**, or **Del** during startup). Select your USB drive. If you have Secure Boot enabled and the installer doesn't load, you may need to disable it in BIOS.",
+      "language": "bash"
+    },
+    {
+      "title": "Install Linux Alongside Windows",
+      "content": "In the installer, choose **Install alongside Windows** (or \"Something else\" for manual partitioning). The installer will detect Windows and set up the partition automatically.\n\nFor manual partitioning, create:\n- **/** (root) — at least 30GB, ext4\n- **swap** — equal to your RAM (or skip with a swap file)\n- **/home** — remaining space, ext4 (optional but recommended)",
+      "language": "bash"
+    },
+    {
+      "title": "Configure GRUB Bootloader",
+      "content": "After installation, **GRUB** will be your bootloader. On every startup, you'll see a menu to choose between Linux and Windows. If Windows doesn't appear in the menu, run:",
+      "code": "sudo update-grub",
+      "language": "bash"
+    },
+    {
+      "title": "Verify Both Systems Work",
+      "content": "Reboot and test both operating systems from the GRUB menu. Make sure Windows still boots correctly and your files are intact. In Linux, you can access your Windows files by mounting the NTFS partition.",
+      "code": "# See your partitions:\nlsblk\n# Mount Windows partition (usually already auto-mounted):\nsudo mount /dev/sda2 /mnt/windows",
+      "language": "bash"
+    }
+  ],
+  "relatedGuides": ["linux-terminal-basics", "customize-linux-desktop"],
+  "seo": {
+    "title": "How to Dual Boot Windows and Linux | Step-by-Step Guide",
+    "description": "Learn how to install Linux alongside Windows with dual boot. Complete guide with partitioning, USB creation, and GRUB setup.",
+    "keywords": ["dual boot", "windows linux", "dual boot linux", "install linux alongside windows", "grub bootloader"]
+  }
+}

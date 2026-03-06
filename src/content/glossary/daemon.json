@@ -1,0 +1,19 @@
+{
+  "term": "Daemon",
+  "slug": "daemon",
+  "shortDefinition": "A background process that runs continuously on a Linux system, handling services like networking, logging, and scheduling.",
+  "longDefinition": "A daemon is a type of computer program that runs as a background process on Linux and Unix-like systems, rather than being directly controlled by an interactive user. Daemons typically start during the system boot process and continue running until the system is shut down. They handle essential system services such as web serving (httpd/nginx), secure shell connections (sshd), logging (syslogd), printing (cupsd), and time-based scheduling (crond). By convention, daemon process names often end with the letter 'd'. Modern Linux distributions use systemd as the init system and service manager to start, stop, monitor, and manage daemons. Daemons detach from the controlling terminal and run in the background, often with no direct user interface, and are fundamental to how Linux systems operate as servers and workstations.",
+  "category": "System Architecture",
+  "relatedTerms": ["kernel", "cron", "ssh", "root", "sudo"],
+  "examples": [
+    "systemctl start nginx - Start the nginx web server daemon",
+    "systemctl status sshd - Check the status of the SSH daemon",
+    "systemctl enable --now crond - Enable and immediately start the cron daemon",
+    "ps aux | grep -E 'd$' - List running processes whose names end with 'd', a common daemon naming convention"
+  ],
+  "seo": {
+    "title": "What is a Daemon in Linux? | Background Processes Explained",
+    "description": "Learn what a daemon is in Linux, how background services work, and how systemd manages daemons for networking, logging, and more.",
+    "keywords": ["daemon linux", "what is a daemon", "linux background process", "linux services", "systemd daemon"]
+  }
+}

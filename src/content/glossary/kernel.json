@@ -1,0 +1,19 @@
+{
+  "term": "Kernel",
+  "slug": "kernel",
+  "shortDefinition": "The core component of the Linux operating system that manages hardware resources and provides essential services to software.",
+  "longDefinition": "The Linux kernel is the fundamental component of the Linux operating system, acting as a bridge between applications and the physical hardware of a computer. Written primarily in C, it was first released by Linus Torvalds in 1991. The kernel handles critical tasks including process management, memory allocation, device driver management, file system operations, and networking. It operates in a privileged mode (kernel space) separate from user applications (user space), providing security and stability. The kernel is monolithic but modular, meaning additional functionality can be loaded and unloaded at runtime through kernel modules. Every Linux distribution is built around the Linux kernel, making it the single shared component across all distros.",
+  "category": "System Architecture",
+  "relatedTerms": ["distro", "root", "daemon", "partition", "mount"],
+  "examples": [
+    "uname -r - Display the currently running kernel version",
+    "sudo dmesg - View kernel messages and hardware detection logs",
+    "lsmod - List all currently loaded kernel modules",
+    "sudo modprobe module_name - Load a kernel module into the running kernel"
+  ],
+  "seo": {
+    "title": "What is the Linux Kernel? | Core OS Component Explained",
+    "description": "Learn what the Linux kernel is, how it manages hardware and software resources, and why it is the core of every Linux distribution.",
+    "keywords": ["linux kernel", "what is kernel", "kernel explained", "linux kernel version", "linux core"]
+  }
+}

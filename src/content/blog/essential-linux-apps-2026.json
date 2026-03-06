@@ -1,0 +1,14 @@
+{
+  "title": "Essential Linux Apps You Should Install in 2026",
+  "slug": "essential-linux-apps-2026",
+  "date": "2026-03-05",
+  "author": "OmniSet Team",
+  "description": "A curated list of must-have Linux applications across productivity, development, multimedia, and system tools.",
+  "content": "## Must-Have Apps for Your Linux Desktop\n\nOne of the best things about Linux is the wealth of high-quality, free software available. Here's our curated list of essential apps every Linux user should know about.\n\n## Productivity\n\n- **LibreOffice** — Full office suite compatible with Microsoft Office formats. Includes Writer, Calc, Impress, and Draw.\n- **Thunderbird** — Feature-rich email client with calendar support, now maintained by a dedicated team at Mozilla.\n- **Obsidian** — Powerful note-taking app using Markdown files stored locally.\n\n## Web Browsers\n\n- **Firefox** — Privacy-focused browser with excellent extension support.\n- **Chromium** — Open-source version of Chrome without Google's tracking.\n\n## Development\n\n- **VS Code** — The most popular code editor with thousands of extensions.\n- **Git** — Version control that every developer needs.\n- **Docker** — Containerize your applications for consistent development and deployment.\n- **Alacritty** — GPU-accelerated terminal emulator that's blazing fast.\n\n## Multimedia\n\n- **VLC** — Plays virtually any media format without additional codecs.\n- **GIMP** — Professional-grade image editor and Photoshop alternative.\n- **OBS Studio** — Screen recording and live streaming tool used by professionals.\n- **Kdenlive** — Powerful, non-linear video editor.\n\n## System Tools\n\n- **Timeshift** — System backup and restore tool. Essential for peace of mind.\n- **htop** — Interactive process viewer, better than the default `top`.\n- **Flameshot** — Screenshot tool with built-in annotation features.\n\n## Install Them All with OmniSet\n\nInstead of installing these one by one, use [OmniSet](/) to set up your entire environment with a single command. Our profiles bundle the right tools for your use case — development, design, gaming, or general productivity.\n\nBrowse our full [tools directory](/tools/) to discover more Linux software.",
+  "tags": ["linux", "apps", "tools", "productivity", "2026"],
+  "seo": {
+    "title": "Essential Linux Apps to Install in 2026 — Must-Have Software",
+    "description": "Discover the must-have Linux applications for 2026. Our curated list covers productivity, development, multimedia, and system tools every user needs.",
+    "keywords": ["essential linux apps", "best linux software 2026", "must have linux apps", "linux tools"]
+  }
+}

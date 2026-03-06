@@ -2,6 +2,8 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '@layouts/BaseLayout.astro';
 import JsonLd from '@components/seo/JsonLd.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
+import TableOfContents from '@components/TableOfContents.astro';
 import { marked } from 'marked';
 
 export async function getStaticPaths() {
@@ -79,12 +81,11 @@ const articleSchema = {
   <section class="py-12 bg-gradient-hero text-white">
     <div class="container mx-auto px-6">
       <div class="max-w-4xl mx-auto">
-        <a href="/docs/" class="inline-flex items-center gap-2 text-white/70 hover:text-white mb-4 transition-colors">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-          </svg>
-          Back to Documentation
-        </a>
+        <Breadcrumb items={[
+          { label: 'Home', href: '/' },
+          { label: 'Docs', href: '/docs/' },
+          { label: doc.title }
+        ]} />
         <h1 class="text-3xl md:text-4xl font-bold">{doc.title}</h1>
         <p class="text-lg text-white/80 mt-4">{doc.description}</p>
       </div>
@@ -122,35 +123,21 @@ const articleSchema = {
           </div>
 
           <!-- Sidebar TOC -->
-          <div class="hidden lg:block">
-            <div class="sticky top-24">
-              <h3 class="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-4">On this page</h3>
+          <TableOfContents items={doc.sections.map((s) => ({ title: s.title, id: s.title.toLowerCase().replace(/\s+/g, '-') }))}>
+            <div class="mt-8 pt-8 border-t border-gray-200">
+              <h3 class="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-4">More docs</h3>
               <nav class="space-y-2">
-                {doc.sections.map((section) => (
+                {docs.filter(d => d.data.slug !== doc.slug).slice(0, 5).map((d) => (
                   <a
-                    href={`#${section.title.toLowerCase().replace(/\s+/g, '-')}`}
-                    class="block text-sm text-gray-600 hover:text-indigo-600 transition-colors"
+                    href={`/docs/${d.data.slug}/`}
+                    class="block text-sm text-gray-600 hover:text-orange-600 transition-colors"
                   >
-                    {section.title}
+                    {d.data.title}
                   </a>
                 ))}
               </nav>
-
-              <div class="mt-8 pt-8 border-t border-gray-200">
-                <h3 class="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-4">More docs</h3>
-                <nav class="space-y-2">
-                  {docs.filter(d => d.data.slug !== doc.slug).slice(0, 5).map((d) => (
-                    <a
-                      href={`/docs/${d.data.slug}/`}
-                      class="block text-sm text-gray-600 hover:text-indigo-600 transition-colors"
-                    >
-                      {d.data.title}
-                    </a>
-                  ))}
-                </nav>
-              </div>
             </div>
-          </div>
+          </TableOfContents>
         </div>
       </div>
     </div>
