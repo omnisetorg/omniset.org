@@ -1,0 +1,50 @@
+{
+  "title": "How to Set Up a Printer on Linux",
+  "slug": "setup-printer-linux",
+  "description": "Connect and configure your printer on Linux — plug-and-play setup, manual configuration, and troubleshooting common issues.",
+  "difficulty": "beginner",
+  "timeToComplete": "10 minutes",
+  "prerequisites": ["A Linux distribution installed", "A printer (USB or network)"],
+  "steps": [
+    {
+      "title": "Try plug and play first",
+      "content": "Many modern printers work out of the box on Linux. Connect your printer via USB or make sure it's on the same WiFi network, then open **Settings → Printers**. Click **Add Printer** and your system should detect it automatically. HP, Brother, and Epson printers have the best Linux support."
+    },
+    {
+      "title": "Install printer drivers",
+      "content": "If your printer isn't detected automatically, install the common driver packages. These cover most consumer printers.",
+      "code": "sudo apt update\nsudo apt install cups printer-driver-all\n\n# For HP printers specifically:\nsudo apt install hplip\n\n# For Brother printers:\n# Download the driver from support.brother.com and run the installer",
+      "language": "bash"
+    },
+    {
+      "title": "Start the CUPS print service",
+      "content": "CUPS (Common Unix Printing System) manages all printing on Linux. Make sure it's running.",
+      "code": "sudo systemctl enable cups\nsudo systemctl start cups\nsudo systemctl status cups",
+      "language": "bash"
+    },
+    {
+      "title": "Add a printer via the web interface",
+      "content": "CUPS has a powerful web interface for printer management. Open it in your browser and follow the wizard to add your printer.",
+      "code": "# Open in your browser:\nxdg-open http://localhost:631",
+      "language": "bash"
+    },
+    {
+      "title": "Add a network printer manually",
+      "content": "If your WiFi printer isn't detected, you can add it by IP address. Find your printer's IP from its settings menu or your router's device list.",
+      "code": "# Find printers on your network:\navahi-browse -art | grep Printer\n\n# Or add directly via CUPS:\nlpadmin -p MyPrinter -E -v ipp://192.168.1.100/ipp/print -m everywhere",
+      "language": "bash"
+    },
+    {
+      "title": "Print a test page",
+      "content": "Verify everything works by printing a test page from the terminal or from Settings → Printers → your printer → Print Test Page.",
+      "code": "# Print a test page:\nlp -d MyPrinter /usr/share/cups/data/testprint\n\n# Or print any file:\nlp -d MyPrinter document.pdf",
+      "language": "bash"
+    }
+  ],
+  "relatedGuides": ["install-software-linux", "keep-linux-updated"],
+  "seo": {
+    "title": "How to Set Up a Printer on Linux — USB & WiFi Guide",
+    "description": "Step-by-step guide to setting up printers on Linux. Covers plug-and-play, CUPS configuration, HP/Brother/Epson drivers, and network printers.",
+    "keywords": ["printer linux", "setup printer ubuntu", "cups linux", "hplip", "linux printing", "add printer linux", "network printer linux"]
+  }
+}

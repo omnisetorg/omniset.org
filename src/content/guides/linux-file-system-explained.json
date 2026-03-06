@@ -1,0 +1,46 @@
+{
+  "title": "Understanding the Linux File System",
+  "slug": "linux-file-system-explained",
+  "description": "Learn how the Linux file system is organized — where your files go, what each folder does, and why there's no C: drive.",
+  "difficulty": "beginner",
+  "timeToComplete": "10 minutes",
+  "prerequisites": [],
+  "steps": [
+    {
+      "title": "Forget drive letters",
+      "content": "On Windows, you have `C:\\`, `D:\\`, etc. Linux doesn't use drive letters. Instead, everything starts from a single root directory: `/`. All files, folders, devices, and even other drives live under this one tree. Your USB drive doesn't become `E:` — it gets \"mounted\" at a path like `/media/your-name/usb-drive/`."
+    },
+    {
+      "title": "Your home directory: /home",
+      "content": "This is **your** space. Documents, Downloads, Music, Desktop — all your personal files live here. It's like `C:\\Users\\YourName` on Windows. Each user gets their own folder.",
+      "code": "ls ~/\n# Same as:\nls /home/your-username/",
+      "language": "bash"
+    },
+    {
+      "title": "System directories you should know",
+      "content": "Here are the most important top-level directories:\n\n- `/` — Root, the top of everything\n- `/home` — Your personal files\n- `/etc` — System configuration files\n- `/var` — Variable data (logs, databases, caches)\n- `/tmp` — Temporary files (cleared on reboot)\n- `/usr` — User programs and libraries\n- `/opt` — Optional/third-party software\n- `/bin` and `/sbin` — Essential system commands\n- `/dev` — Hardware devices (disks, USB, etc.)\n- `/mnt` and `/media` — Mounted drives and USB sticks"
+    },
+    {
+      "title": "Hidden files start with a dot",
+      "content": "Linux uses a dot prefix instead of a hidden attribute. Files and folders starting with `.` are hidden by default. Most app configs live in your home directory as hidden folders like `~/.config/`.",
+      "code": "# Show hidden files:\nls -a ~/\n\n# Common hidden config folders:\nls ~/.config/\nls ~/.local/share/",
+      "language": "bash"
+    },
+    {
+      "title": "Paths use forward slashes",
+      "content": "Windows uses backslashes (`C:\\Users\\Documents`), Linux uses forward slashes (`/home/user/Documents`). Paths are also **case-sensitive** — `Documents` and `documents` are two different folders."
+    },
+    {
+      "title": "See disk usage and mounted drives",
+      "content": "Check how much space you have, and see where drives are mounted.",
+      "code": "# Disk usage summary:\ndf -h\n\n# Size of a specific folder:\ndu -sh ~/Downloads\n\n# List mounted drives:\nlsblk",
+      "language": "bash"
+    }
+  ],
+  "relatedGuides": ["linux-terminal-basics", "install-software-linux"],
+  "seo": {
+    "title": "Linux File System Explained for Beginners",
+    "description": "Understand how the Linux file system works. Learn what /home, /etc, /var, and other directories do — explained for Windows and macOS switchers.",
+    "keywords": ["linux file system", "linux directory structure", "linux folders explained", "home directory linux", "linux vs windows files", "linux root directory", "linux path"]
+  }
+}

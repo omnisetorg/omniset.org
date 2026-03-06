@@ -1,0 +1,50 @@
+{
+  "title": "How to Keep Linux Updated and Secure",
+  "slug": "keep-linux-updated",
+  "description": "Learn how to update your Linux system, enable automatic security updates, and set up a basic firewall.",
+  "difficulty": "beginner",
+  "timeToComplete": "10 minutes",
+  "prerequisites": ["A Linux distribution installed (Ubuntu, Debian, Mint, etc.)"],
+  "steps": [
+    {
+      "title": "Update from the terminal",
+      "content": "The most reliable way to update your system. `apt update` refreshes the list of available packages, and `apt upgrade` installs the new versions.",
+      "code": "sudo apt update && sudo apt upgrade",
+      "language": "bash"
+    },
+    {
+      "title": "Update from the GUI",
+      "content": "Don't want to use the terminal? Most distros have a graphical updater:\n\n- **Ubuntu**: Software Updater (opens automatically when updates are available)\n- **Linux Mint**: Update Manager (lives in the system tray)\n- **Pop!_OS**: Settings → OS Upgrade & Recovery\n\nClick the notification or open the updater from the app menu."
+    },
+    {
+      "title": "Enable automatic security updates",
+      "content": "Let your system install critical security patches automatically in the background. This only applies to security updates — not app upgrades.",
+      "code": "sudo apt install unattended-upgrades\nsudo dpkg-reconfigure --priority=low unattended-upgrades",
+      "language": "bash"
+    },
+    {
+      "title": "Clean up old packages",
+      "content": "Over time, unused packages and old kernels pile up. Clean them periodically to free space.",
+      "code": "sudo apt autoremove\nsudo apt autoclean",
+      "language": "bash"
+    },
+    {
+      "title": "Set up a basic firewall",
+      "content": "UFW (Uncomplicated Firewall) is a simple firewall that comes with Ubuntu. Enable it to block unwanted incoming connections while allowing your normal internet use.",
+      "code": "sudo ufw enable\nsudo ufw status\n\n# Allow SSH if you need remote access:\nsudo ufw allow ssh",
+      "language": "bash"
+    },
+    {
+      "title": "Update Flatpak and Snap apps",
+      "content": "Flatpak and Snap apps update separately from your system packages. Snaps update automatically, but you can trigger it manually. Flatpak needs a manual command.",
+      "code": "# Update all Flatpak apps:\nflatpak update\n\n# Update all Snap apps:\nsudo snap refresh",
+      "language": "bash"
+    }
+  ],
+  "relatedGuides": ["install-software-linux", "linux-terminal-basics"],
+  "seo": {
+    "title": "How to Keep Linux Updated and Secure — Beginner Guide",
+    "description": "Learn how to update your Linux system, enable automatic security updates, clean up old packages, and set up a basic firewall with UFW.",
+    "keywords": ["update linux", "apt upgrade", "linux security", "ufw firewall", "automatic updates linux", "unattended upgrades", "linux maintenance"]
+  }
+}

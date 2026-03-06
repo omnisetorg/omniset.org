@@ -1,0 +1,54 @@
+{
+  "title": "How to Run Windows Apps on Linux",
+  "slug": "run-windows-apps-linux",
+  "description": "Run Windows software on Linux using Wine, Bottles, and compatibility layers — no dual boot required.",
+  "difficulty": "intermediate",
+  "timeToComplete": "20 minutes",
+  "prerequisites": ["A Linux distribution installed", "Basic terminal knowledge"],
+  "steps": [
+    {
+      "title": "Understand compatibility layers",
+      "content": "Linux can't run `.exe` files natively, but **Wine** (Wine Is Not an Emulator) translates Windows system calls to Linux ones in real time. It's not a virtual machine — apps run at near-native speed. Tools like **Bottles** and **Lutris** build on top of Wine to make things easier."
+    },
+    {
+      "title": "Install Wine",
+      "content": "Install Wine from your distribution's repositories. The `winetricks` package adds common Windows libraries that many apps need.",
+      "code": "sudo dpkg --add-architecture i386\nsudo apt update\nsudo apt install wine64 wine32 winetricks",
+      "language": "bash"
+    },
+    {
+      "title": "Run a Windows program with Wine",
+      "content": "Once Wine is installed, you can run most `.exe` files directly. Wine creates a fake `C:\\` drive in your home folder at `~/.wine/drive_c/`.",
+      "code": "wine setup.exe\n# Or run an already-installed program:\nwine ~/.wine/drive_c/Program\\ Files/MyApp/app.exe",
+      "language": "bash"
+    },
+    {
+      "title": "Install Bottles (recommended GUI)",
+      "content": "**Bottles** is a modern, user-friendly app that manages Wine environments for you. It lets you create isolated \"bottles\" for different apps, each with its own configuration.",
+      "code": "flatpak install flathub com.usebottles.bottles\nflatpak run com.usebottles.bottles",
+      "language": "bash"
+    },
+    {
+      "title": "Use Lutris for games",
+      "content": "**Lutris** is a game manager that automates the setup of Windows games on Linux. It has community-maintained install scripts for thousands of games, handling Wine versions, dependencies, and tweaks automatically.",
+      "code": "sudo apt install lutris",
+      "language": "bash"
+    },
+    {
+      "title": "Check app compatibility",
+      "content": "Not every Windows app works perfectly. Before trying, check these resources:\n\n- **WineHQ AppDB** (appdb.winehq.org) — rates thousands of apps from Platinum to Garbage\n- **ProtonDB** (protondb.com) — specifically for Steam games via Proton\n- **Bottles app database** — community reports inside the Bottles app"
+    },
+    {
+      "title": "When to use a virtual machine instead",
+      "content": "Some apps (especially those with anti-cheat, DRM, or deep Windows integration) won't work in Wine. For those, a Windows virtual machine is the better option. **VirtualBox** is free and works well for non-gaming apps.",
+      "code": "sudo apt install virtualbox",
+      "language": "bash"
+    }
+  ],
+  "relatedGuides": ["gaming-linux-setup", "install-software-linux"],
+  "seo": {
+    "title": "How to Run Windows Apps on Linux — Wine, Bottles & Lutris",
+    "description": "Complete guide to running Windows programs on Linux. Learn to use Wine, Bottles, and Lutris to run .exe files without dual booting.",
+    "keywords": ["run windows apps on linux", "wine linux", "bottles linux", "lutris", "exe on linux", "windows programs on linux", "wine compatibility"]
+  }
+}

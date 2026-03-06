@@ -1,0 +1,57 @@
+{
+  "title": "How to Fix Audio Not Working on Linux",
+  "slug": "fix-audio-linux",
+  "description": "Troubleshoot and fix sound issues on Linux — from wrong output devices to PipeWire and PulseAudio configuration.",
+  "difficulty": "beginner",
+  "timeToComplete": "10 minutes",
+  "prerequisites": ["A Linux distribution installed"],
+  "steps": [
+    {
+      "title": "Check the obvious things first",
+      "content": "Before diving into terminal commands, check the basics:\n\n- Is the volume turned up in the system tray?\n- Is the correct output device selected (speakers vs HDMI vs Bluetooth)?\n- Is the app itself muted?\n\nOpen **Settings → Sound** and make sure the right output device is active and the volume slider is up."
+    },
+    {
+      "title": "Check which audio system you're using",
+      "content": "Modern Linux uses either **PipeWire** (newer, default on Ubuntu 24.04+, Fedora) or **PulseAudio** (older but still common). Check which one is running.",
+      "code": "pactl info | grep 'Server Name'",
+      "language": "bash"
+    },
+    {
+      "title": "List available audio devices",
+      "content": "See all detected sound cards and output devices. If your expected device isn't listed, it might be a driver issue.",
+      "code": "pactl list sinks short\naplay -l",
+      "language": "bash"
+    },
+    {
+      "title": "Set the correct default output",
+      "content": "If the wrong device is selected, switch to the correct one. First list the sinks to find the name, then set it as default.",
+      "code": "pactl list sinks short\npactl set-default-sink <sink-name>",
+      "language": "bash"
+    },
+    {
+      "title": "Restart the audio service",
+      "content": "Sometimes the audio server just needs a restart. This kills and restarts the audio process.",
+      "code": "# For PipeWire:\nsystemctl --user restart pipewire pipewire-pulse\n\n# For PulseAudio:\npulseaudio -k\npulseaudio --start",
+      "language": "bash"
+    },
+    {
+      "title": "Fix HDMI audio with NVIDIA",
+      "content": "A common issue: HDMI audio not working when using NVIDIA drivers. The NVIDIA driver sometimes doesn't expose the HDMI audio device properly. Install the ALSA NVIDIA plugin and reboot.",
+      "code": "sudo apt install libasound2-plugins\nsudo reboot",
+      "language": "bash"
+    },
+    {
+      "title": "Install PipeWire (if using old PulseAudio)",
+      "content": "If you're on an older system with PulseAudio and experiencing issues, upgrading to PipeWire often fixes them. PipeWire is a drop-in replacement with better Bluetooth audio, lower latency, and fewer bugs.",
+      "code": "sudo apt install pipewire pipewire-pulse wireplumber\nsudo reboot",
+      "language": "bash",
+      "warning": "This replaces PulseAudio with PipeWire. It's generally safe, but make sure to reboot after installing."
+    }
+  ],
+  "relatedGuides": ["fix-wifi-linux", "install-nvidia-drivers-linux"],
+  "seo": {
+    "title": "Fix Audio Not Working on Linux — PipeWire & PulseAudio Guide",
+    "description": "No sound on Linux? Step-by-step guide to fixing audio issues — wrong output device, PipeWire/PulseAudio restart, HDMI audio, and more.",
+    "keywords": ["no sound linux", "fix audio linux", "linux sound not working", "pipewire", "pulseaudio", "hdmi audio linux", "ubuntu no sound"]
+  }
+}

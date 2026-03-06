@@ -1,0 +1,59 @@
+{
+  "title": "How to Install NVIDIA Drivers on Linux",
+  "slug": "install-nvidia-drivers-linux",
+  "description": "Install the correct NVIDIA proprietary drivers on Ubuntu and other Linux distributions for gaming, CUDA, and general performance.",
+  "difficulty": "intermediate",
+  "timeToComplete": "15 minutes",
+  "prerequisites": ["A Linux distribution installed", "An NVIDIA graphics card"],
+  "steps": [
+    {
+      "title": "Check your NVIDIA GPU model",
+      "content": "Before installing drivers, identify your exact GPU model. This determines which driver version you need.",
+      "code": "lspci | grep -i nvidia",
+      "language": "bash"
+    },
+    {
+      "title": "See recommended drivers",
+      "content": "Ubuntu can detect your GPU and recommend the best driver. The `ubuntu-drivers` tool lists all compatible drivers and marks the recommended one.",
+      "code": "sudo ubuntu-drivers devices",
+      "language": "bash"
+    },
+    {
+      "title": "Install the recommended driver automatically",
+      "content": "The easiest method — let Ubuntu pick and install the best driver for your card. This works on Ubuntu, Pop!_OS, Linux Mint, and other Ubuntu-based distros.",
+      "code": "sudo ubuntu-drivers autoinstall",
+      "language": "bash"
+    },
+    {
+      "title": "Or install a specific driver version",
+      "content": "If you need a specific version (for example, for CUDA compatibility or a newer GPU), install it directly with APT.",
+      "code": "sudo apt update\nsudo apt install nvidia-driver-560",
+      "language": "bash",
+      "warning": "Don't install drivers from NVIDIA's website (.run file) unless you know what you're doing. It can break your system on kernel updates."
+    },
+    {
+      "title": "Reboot your system",
+      "content": "NVIDIA drivers require a reboot to load. The new driver replaces the open-source `nouveau` driver.",
+      "code": "sudo reboot",
+      "language": "bash"
+    },
+    {
+      "title": "Verify the installation",
+      "content": "After rebooting, check that the NVIDIA driver is active. `nvidia-smi` shows your GPU info, driver version, and current usage.",
+      "code": "nvidia-smi",
+      "language": "bash"
+    },
+    {
+      "title": "Open NVIDIA Settings",
+      "content": "The NVIDIA Settings panel lets you configure resolution, multiple monitors, performance modes, and more. You can also launch it from your application menu.",
+      "code": "nvidia-settings",
+      "language": "bash"
+    }
+  ],
+  "relatedGuides": ["gaming-linux-setup", "fix-wifi-linux"],
+  "seo": {
+    "title": "How to Install NVIDIA Drivers on Linux (Ubuntu, Mint, Pop!_OS)",
+    "description": "Step-by-step guide to installing NVIDIA proprietary drivers on Linux. Covers automatic installation, manual setup, and verification.",
+    "keywords": ["install nvidia drivers linux", "nvidia linux", "nvidia-smi", "ubuntu nvidia driver", "linux gpu driver", "nvidia 560 linux", "nouveau vs nvidia"]
+  }
+}

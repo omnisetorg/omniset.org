@@ -1,0 +1,44 @@
+{
+  "title": "Switching from Windows to Linux: What to Expect",
+  "slug": "switch-from-windows-to-linux",
+  "description": "Everything you need to know before making the switch from Windows to Linux — what changes, what stays the same, and how to prepare.",
+  "difficulty": "beginner",
+  "timeToComplete": "15 minutes",
+  "prerequisites": [],
+  "steps": [
+    {
+      "title": "What stays the same",
+      "content": "More than you'd think:\n\n- **Browsers** — Chrome, Firefox, Edge all work on Linux\n- **Web apps** — Gmail, Google Docs, Notion, Figma, Spotify (web) — all the same\n- **VS Code** — native Linux version, same extensions\n- **Discord, Slack, Zoom** — all have Linux apps\n- **Steam** — native Linux client, and most Windows games work via Proton\n\nIf you live in the browser, the transition is almost invisible."
+    },
+    {
+      "title": "What changes",
+      "content": "Here are the real differences:\n\n- **No .exe files** — Linux has its own package formats (APT, Flatpak, Snap)\n- **No Registry** — config lives in text files (much simpler)\n- **The terminal matters** — you don't need it for everything, but it's the fastest way to do many things\n- **Software names change** — Explorer → Files (Nautilus), Task Manager → System Monitor, Paint → Drawing\n- **Updates don't force restart** — and they update ALL your software, not just the OS"
+    },
+    {
+      "title": "Back up your data first",
+      "content": "Before doing anything, copy your important files to an external drive or cloud storage. Back up:\n\n- Documents, Desktop, Downloads, Pictures, Music, Videos\n- Browser bookmarks (sync with your Google/Firefox account)\n- App-specific data (game saves, project files)\n- WiFi passwords and important credentials"
+    },
+    {
+      "title": "Choose a beginner-friendly distro",
+      "content": "Don't overthink this — any of these will serve you well:\n\n- **Linux Mint** — most Windows-like, smoothest transition\n- **Ubuntu** — largest community, most tutorials online\n- **Zorin OS** — literally designed for Windows switchers\n- **Pop!_OS** — great for developers and gamers\n\nYou can try any of them from a USB drive without installing."
+    },
+    {
+      "title": "Find Linux alternatives for your apps",
+      "content": "Most Windows software has solid Linux alternatives:\n\n| Windows App | Linux Alternative |\n|---|---|\n| Microsoft Office | LibreOffice, OnlyOffice |\n| Adobe Photoshop | GIMP, Krita |\n| Adobe Premiere | Kdenlive, DaVinci Resolve |\n| Notepad++ | Kate, Geany |\n| WinRAR | File Roller (built-in) |\n| iTunes | Rhythmbox, Strawberry |\n\nSome apps (like Wine or Bottles) can also run Windows software directly."
+    },
+    {
+      "title": "Try before you commit",
+      "content": "You don't have to wipe Windows to try Linux. Your options:\n\n1. **Live USB** — boot from a USB stick, try Linux without installing\n2. **Dual boot** — install Linux alongside Windows, choose at startup\n3. **Virtual machine** — run Linux inside Windows using VirtualBox\n\nStart with a Live USB. If you like it, go for dual boot. You can always remove Linux later."
+    },
+    {
+      "title": "Get help when stuck",
+      "content": "The Linux community is massive and helpful:\n\n- **Ask Ubuntu** (askubuntu.com) — Q&A for Ubuntu-based distros\n- **Linux subreddits** — r/linux4noobs, r/linuxquestions\n- **Arch Wiki** (wiki.archlinux.org) — detailed docs that apply to most distros\n- **Your distro's forum** — every distro has an official forum\n\nWhen searching for help, always include your distro name: \"Ubuntu wifi not working\" gets better results than just \"Linux wifi not working\"."
+    }
+  ],
+  "relatedGuides": ["linux-terminal-basics", "linux-file-system-explained", "install-software-linux"],
+  "seo": {
+    "title": "Switching from Windows to Linux — What to Know Before You Start",
+    "description": "Complete guide for Windows users switching to Linux. What changes, what stays the same, how to prepare, and which distro to choose.",
+    "keywords": ["switch from windows to linux", "windows to linux", "linux for windows users", "linux beginner", "should i switch to linux", "linux vs windows", "best linux for beginners"]
+  }
+}

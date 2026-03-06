@@ -1,0 +1,49 @@
+{
+  "title": "Understanding Linux File Permissions",
+  "slug": "linux-file-permissions",
+  "description": "Learn how Linux file permissions work — read, write, execute, chmod, chown, and why you get 'Permission denied'.",
+  "difficulty": "beginner",
+  "timeToComplete": "10 minutes",
+  "prerequisites": ["Basic terminal knowledge"],
+  "steps": [
+    {
+      "title": "Why 'Permission denied' happens",
+      "content": "Linux controls who can read, write, and run every file. When you see \"Permission denied\", it means your user account doesn't have the right permission for that action. This is a security feature — it keeps you from accidentally breaking your system and stops malware from modifying system files."
+    },
+    {
+      "title": "Read permission letters",
+      "content": "List a file's permissions with `ls -l`. You'll see something like `-rwxr-xr--`. Here's how to read it:\n\n- Position 1: file type (`-` = file, `d` = directory)\n- Positions 2-4: **owner** permissions (rwx)\n- Positions 5-7: **group** permissions (r-x)\n- Positions 8-10: **others** permissions (r--)\n\nEach position is: `r` = read, `w` = write, `x` = execute, `-` = no permission.",
+      "code": "ls -l myfile.txt\n# Output: -rw-r--r-- 1 gabriel users 1024 Mar 5 10:00 myfile.txt\n# Owner: read+write | Group: read | Others: read",
+      "language": "bash"
+    },
+    {
+      "title": "Change permissions with chmod",
+      "content": "Use `chmod` to add or remove permissions. The `+` adds a permission, `-` removes it. Use `u` (owner), `g` (group), `o` (others), or `a` (all).",
+      "code": "# Make a file executable:\nchmod +x script.sh\n\n# Remove write permission for others:\nchmod o-w myfile.txt\n\n# Give owner full access, read-only for everyone else:\nchmod u=rwx,go=r myfile.txt",
+      "language": "bash"
+    },
+    {
+      "title": "Numeric (octal) permissions",
+      "content": "You'll often see permissions written as numbers like `755` or `644`. Each digit is a sum: **r=4**, **w=2**, **x=1**.\n\n- `7` = rwx (4+2+1)\n- `6` = rw- (4+2)\n- `5` = r-x (4+1)\n- `4` = r-- (4)\n\nCommon combos: `755` = owner full, others read+execute. `644` = owner read+write, others read-only.",
+      "code": "# Set 755 permissions:\nchmod 755 script.sh\n\n# Set 644 permissions:\nchmod 644 document.txt",
+      "language": "bash"
+    },
+    {
+      "title": "Change file ownership with chown",
+      "content": "Each file has an owner and a group. Use `chown` to change them. You need `sudo` for this.",
+      "code": "# Change owner:\nsudo chown gabriel myfile.txt\n\n# Change owner and group:\nsudo chown gabriel:users myfile.txt\n\n# Change ownership of a folder and everything inside:\nsudo chown -R gabriel:users /path/to/folder/",
+      "language": "bash"
+    },
+    {
+      "title": "When to use sudo vs changing permissions",
+      "content": "- Use **sudo** for one-time system tasks (installing software, editing system config)\n- Use **chmod/chown** when you need to permanently fix who can access a file\n- **Never** run everything as root or `chmod 777` everything — that defeats the entire security model",
+      "warning": "Avoid chmod 777 — it gives everyone full access. If you think you need 777, you probably need to change the file owner instead."
+    }
+  ],
+  "relatedGuides": ["linux-terminal-basics", "linux-file-system-explained"],
+  "seo": {
+    "title": "Linux File Permissions Explained — chmod, chown, rwx",
+    "description": "Understand Linux file permissions — what rwx means, how to use chmod and chown, numeric permissions like 755, and fixing 'Permission denied' errors.",
+    "keywords": ["linux file permissions", "chmod", "chown", "permission denied linux", "rwx permissions", "chmod 755", "chmod 644", "linux permissions explained"]
+  }
+}

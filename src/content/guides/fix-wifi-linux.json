@@ -1,0 +1,59 @@
+{
+  "title": "How to Fix WiFi Not Working on Linux",
+  "slug": "fix-wifi-linux",
+  "description": "Step-by-step troubleshooting guide for wireless connectivity issues on Linux — from missing drivers to firmware fixes.",
+  "difficulty": "intermediate",
+  "timeToComplete": "15 minutes",
+  "prerequisites": ["A Linux distribution installed", "Ethernet or USB tethering for downloading drivers"],
+  "steps": [
+    {
+      "title": "Check if your WiFi adapter is detected",
+      "content": "First, let's see if Linux recognizes your WiFi hardware at all. The `lspci` command shows PCI devices (internal cards), and `lsusb` shows USB devices (USB WiFi dongles).",
+      "code": "lspci | grep -i network\nlsusb | grep -i wireless",
+      "language": "bash"
+    },
+    {
+      "title": "Check the current network status",
+      "content": "Use `nmcli` (NetworkManager CLI) to see the state of your network interfaces. Look for your wireless device — if it says 'unavailable' or is missing, the driver isn't loaded.",
+      "code": "nmcli device status\nnmcli radio wifi",
+      "language": "bash"
+    },
+    {
+      "title": "Make sure WiFi is not blocked",
+      "content": "Some laptops have a hardware or software WiFi kill switch. The `rfkill` command shows if your wireless is blocked. If it says 'soft blocked', unblock it.",
+      "code": "rfkill list\nsudo rfkill unblock wifi",
+      "language": "bash"
+    },
+    {
+      "title": "Install missing firmware and drivers",
+      "content": "The most common cause of WiFi issues is missing firmware. Install the common firmware packages, which cover most Broadcom, Intel, and Realtek adapters.",
+      "code": "sudo apt update\nsudo apt install linux-firmware firmware-misc-nonfree\nsudo apt install bcmwl-kernel-source",
+      "language": "bash",
+      "warning": "You'll need an internet connection (Ethernet or USB tethering) to download these packages."
+    },
+    {
+      "title": "Try the additional drivers tool",
+      "content": "Ubuntu and its derivatives have a built-in tool that detects your hardware and offers proprietary drivers. Open **Software & Updates** → **Additional Drivers** tab, or run it from the terminal.",
+      "code": "sudo ubuntu-drivers autoinstall",
+      "language": "bash"
+    },
+    {
+      "title": "Restart NetworkManager",
+      "content": "After installing drivers, restart the network service to pick up the changes. If that doesn't work, a full reboot usually does.",
+      "code": "sudo systemctl restart NetworkManager\n# If still not working:\nsudo reboot",
+      "language": "bash"
+    },
+    {
+      "title": "Connect to your network",
+      "content": "Once your adapter is detected, connect to your WiFi network from the terminal or the GUI.",
+      "code": "nmcli device wifi list\nnmcli device wifi connect \"YourNetworkName\" password \"YourPassword\"",
+      "language": "bash"
+    }
+  ],
+  "relatedGuides": ["install-nvidia-drivers-linux", "fix-audio-linux"],
+  "seo": {
+    "title": "Fix WiFi Not Working on Linux — Step-by-Step Troubleshooting",
+    "description": "WiFi not working on Linux? Follow this guide to diagnose and fix wireless issues — missing drivers, firmware, rfkill blocks, and more.",
+    "keywords": ["wifi not working linux", "fix wifi linux", "linux wireless driver", "broadcom wifi linux", "ubuntu wifi not working", "linux firmware", "nmcli wifi"]
+  }
+}

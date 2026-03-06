@@ -1,0 +1,63 @@
+{
+  "title": "How to Install Software on Linux",
+  "slug": "install-software-linux",
+  "description": "Learn the different ways to install programs on Linux — from package managers and software centers to Flatpak, Snap, and AppImage.",
+  "difficulty": "beginner",
+  "timeToComplete": "10 minutes",
+  "prerequisites": ["A Linux distribution installed (Ubuntu, Debian, Mint, etc.)"],
+  "steps": [
+    {
+      "title": "Use the Software Center (GUI)",
+      "content": "Most Linux distributions come with a graphical software center, similar to the App Store or Microsoft Store. On Ubuntu it's called **Ubuntu Software**, on Linux Mint it's the **Software Manager**, and on Pop!_OS it's the **Pop!_Shop**. Open it, search for the app you want, and click Install. It's the easiest way to get started."
+    },
+    {
+      "title": "Install with APT (Debian/Ubuntu)",
+      "content": "APT is the default package manager on Debian-based distributions like Ubuntu, Linux Mint, and Pop!_OS. It downloads software from official repositories — curated collections of tested, trusted packages.",
+      "code": "sudo apt update\nsudo apt install firefox vlc gimp",
+      "language": "bash"
+    },
+    {
+      "title": "Search for available packages",
+      "content": "Not sure of the exact package name? Use the search command to find it. This searches all available repositories for matching packages.",
+      "code": "apt search video-editor\napt show kdenlive",
+      "language": "bash"
+    },
+    {
+      "title": "Remove software",
+      "content": "To uninstall a program, use the `remove` command. Add `--purge` to also delete its configuration files. Then run `autoremove` to clean up unused dependencies.",
+      "code": "sudo apt remove firefox\nsudo apt autoremove",
+      "language": "bash"
+    },
+    {
+      "title": "Install Flatpak apps",
+      "content": "Flatpak is a universal package format that works across all distributions. Apps run in a sandbox for extra security and always get the latest version. Flathub is the main Flatpak repository with thousands of apps.",
+      "code": "sudo apt install flatpak\nflatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo\nflatpak install flathub com.spotify.Client",
+      "language": "bash"
+    },
+    {
+      "title": "Install Snap packages",
+      "content": "Snap is another universal package format, developed by Canonical. It comes pre-installed on Ubuntu. Snaps update automatically and also run sandboxed.",
+      "code": "sudo snap install code --classic\nsnap list",
+      "language": "bash"
+    },
+    {
+      "title": "Run an AppImage",
+      "content": "AppImages are standalone executables — no installation needed. Download the `.AppImage` file, make it executable, and run it. It's like a portable app.",
+      "code": "chmod +x MyApp.AppImage\n./MyApp.AppImage",
+      "language": "bash"
+    },
+    {
+      "title": "Install from .deb files",
+      "content": "Some developers provide `.deb` packages for download (like Google Chrome or Discord). You can install these directly. This is similar to running an `.exe` installer on Windows.",
+      "code": "sudo apt install ./google-chrome-stable_current_amd64.deb",
+      "language": "bash",
+      "warning": "Only download .deb files from official sources. Unlike repository packages, .deb files are not reviewed by your distribution."
+    }
+  ],
+  "relatedGuides": ["linux-terminal-basics", "setup-nodejs-linux"],
+  "seo": {
+    "title": "How to Install Software on Linux — APT, Flatpak, Snap & More",
+    "description": "Complete beginner guide to installing programs on Linux. Learn to use APT, Flatpak, Snap, AppImage, and .deb files on Ubuntu, Debian, and Mint.",
+    "keywords": ["install software linux", "apt install", "flatpak", "snap", "appimage", "how to install programs on linux", "linux package manager", "ubuntu software", "deb file"]
+  }
+}
