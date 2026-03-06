@@ -8,9 +8,9 @@ interface Props {
 }
 
 const {
-  title = 'Switch to Linux',
-  subtitle = 'Without the Hassle',
-  description = 'Transform any Linux distribution into a familiar environment that works like macOS or Windows. Perfect for first-time users who want everything to just work.',
+  title = 'Switch to Linux.',
+  subtitle = 'Keep what you know.',
+  description = 'OmniSet turns a fresh Linux install into a setup that feels like home — familiar apps, sane defaults, and none of the manual configuration.',
   showTerminal = true
 } = Astro.props;
 ---
@@ -20,7 +20,7 @@ const {
   <div class="container mx-auto px-6 relative z-10">
     <div class="grid md:grid-cols-2 gap-12 items-center">
       <!-- Left: Text Content -->
-      <div class="text-left">
+      <div class="text-left reveal">
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
           {title}<br>
           <span class="text-white/90">{subtitle}</span>
@@ -35,6 +35,12 @@ const {
             wget -qO- https://omniset.org/install | bash
           </div>
           <div class="text-sm text-white/60 mt-3">Click to copy command</div>
+        </div>
+        <div class="flex items-center gap-3 mt-4">
+          <a href="https://github.com/omnisetorg/install" target="_blank" rel="noopener noreferrer">
+            <img src="https://img.shields.io/github/stars/omnisetorg/install?style=social" alt="GitHub stars" loading="lazy" />
+          </a>
+          <span class="text-sm text-white/60">Trusted by the open source community</span>
         </div>
       </div>
       <!-- Right: Visual Element -->

@@ -12,20 +12,19 @@ const distros = [
 ];
 ---
 
-<section class="py-16 bg-gray-50">
+<section class="py-16" style="background: linear-gradient(180deg, #eef2ff 0%, #f9fafb 100%)">
   <div class="container mx-auto px-6">
-    <div class="text-center mb-12">
-      <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Compatibility list</h2>
+    <div class="text-center mb-12 reveal">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Pick your distro</h2>
       <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-        OmniSet is compatible with all major Debian-based Linux distributions. Choose your favorite or start with
-        Ubuntu if you're new to Linux.
+        OmniSet works across all major Debian-based distributions. Already have a favorite? Great. Not sure yet? Ubuntu is a solid starting point.
       </p>
     </div>
 
-    <div class="relative max-w-full mx-auto mb-12 overflow-hidden">
+    <div class="relative max-w-full mx-auto mb-12 overflow-hidden reveal">
       <div class="flex gap-8 py-4 overflow-x-auto distros-slider">
         {distros.map((distro) => (
-          <a href={distro.url} target="_blank"
+          <a href={`/distros/${distro.slug}/`}
             class="flex-shrink-0 w-40 text-center p-6 bg-white/95 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
             <div
               class="w-16 h-16 mx-auto mb-4 bg-white rounded-2xl flex items-center justify-center p-3 border border-gray-100">
@@ -48,8 +47,7 @@ const distros = [
 
     <div class="text-center">
       <p class="text-gray-600 mb-6 text-lg">
-        <strong class="text-gray-900">New to Linux?</strong> Start with Ubuntu - it has the best hardware support and
-        largest community.
+        <strong class="text-gray-900">New to Linux?</strong> Ubuntu has the widest hardware support and the largest community — a safe first choice.
       </p>
     </div>
   </div>

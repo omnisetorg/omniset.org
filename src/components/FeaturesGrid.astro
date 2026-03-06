@@ -2,34 +2,46 @@
 // Features grid section
 const features = [
   {
-    title: 'Secure & Private',
-    description: 'No viruses, no tracking, no bloatware. Linux security without the complexity.',
-    icon: 'shield'
+    title: 'Private by default',
+    description: 'Linux doesn\'t track you, serve you ads, or bundle software you didn\'t ask for. Your machine, your rules.',
+    icon: 'shield',
+    bgColor: 'bg-green-100',
+    strokeColor: '#16a34a'
   },
   {
-    title: 'Escape the Apple Tax',
-    description: "Love macOS but tired of overpaying? Get that polished experience on any hardware.",
-    icon: 'dollar'
+    title: 'Premium feel, zero cost',
+    description: 'Get a polished desktop experience on any hardware you already own — no $2,000 laptop required.',
+    icon: 'dollar',
+    bgColor: 'bg-amber-100',
+    strokeColor: '#d97706'
   },
   {
-    title: 'Powerful & Flexible',
-    description: 'Configure your system for anything. Code, create, game — install what you need and go.',
-    icon: 'cog'
+    title: 'Built to be yours',
+    description: 'Swap desktops, tweak workflows, automate anything. Linux adapts to how you work, not the other way around.',
+    icon: 'cog',
+    bgColor: 'bg-purple-100',
+    strokeColor: '#9333ea'
   },
   {
-    title: 'Auto Updates',
-    description: "Keep your system fresh with automatic updates that don't interrupt your work.",
-    icon: 'refresh'
+    title: 'Quiet updates',
+    description: 'Updates happen in the background and apply when you\'re ready. No forced restarts, no surprise reboots.',
+    icon: 'refresh',
+    bgColor: 'bg-blue-100',
+    strokeColor: '#2563eb'
   },
   {
-    title: 'Community Driven',
-    description: 'Open source and built by the community. Inspect, modify, and contribute freely.',
-    icon: 'users'
+    title: 'Open source, always',
+    description: 'Every line of OmniSet is public. Read it, fork it, improve it — this project belongs to its community.',
+    icon: 'users',
+    bgColor: 'bg-pink-100',
+    strokeColor: '#db2777'
   },
   {
-    title: 'Hardware Agnostic',
-    description: 'Works on any PC — old or new, Intel or AMD. Breathe new life into old hardware.',
-    icon: 'chip'
+    title: 'Runs on anything',
+    description: 'That old laptop collecting dust? Linux can bring it back. Works on Intel, AMD, ARM — new or decade-old.',
+    icon: 'chip',
+    bgColor: 'bg-orange-100',
+    strokeColor: '#ea580c'
   }
 ];
 
@@ -45,18 +57,18 @@ const iconPaths: Record<string, string> = {
 
 <section class="py-20 bg-white">
   <div class="container mx-auto px-6">
-    <div class="text-center mb-16">
-      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Linux is only the beginning.</h2>
+    <div class="text-center mb-16 reveal">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Why people make the switch</h2>
       <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-        OmniSet lets you do so much more.
+        Real reasons, not marketing fluff.
       </p>
     </div>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-      {features.map((feature) => (
-        <div class="p-6 rounded-2xl bg-gray-50 hover:bg-gray-100 transition-colors">
-          <div class="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center mb-4">
-            <svg width="24" height="24" fill="none" stroke="#4F46E5" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+      {features.map((feature, i) => (
+        <div class="p-6 rounded-2xl bg-gray-50 hover:bg-gray-100 transition-colors reveal" style={`transition-delay: ${i * 100}ms`}>
+          <div class={`w-12 h-12 ${feature.bgColor} rounded-xl flex items-center justify-center mb-4`}>
+            <svg width="24" height="24" fill="none" stroke={feature.strokeColor} stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
               <path d={iconPaths[feature.icon]} stroke-linecap="round" stroke-linejoin="round"/>
               {feature.icon === 'cog' && (
                 <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"/>
